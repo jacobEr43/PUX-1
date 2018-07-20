@@ -1,0 +1,289 @@
+
+@import "_mixins/pux/breakpoints.scss";
+@import "_mixins/pux/css-rules.scss";
+@import "_mixins/pux/scale.scss";
+@import "_variables.scss";
+
+.pux-container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $container-padding-left;
+    padding-right: $container-padding-right;
+    max-width: $container-max-width;
+    &:after{
+        display: block;
+        content: "";
+        clear: both;
+    }
+    @include media(md){
+        padding-left: $container-padding-left-md;
+        padding-right: $container-padding-right-md;
+    }
+}
+
+.pux-container{
+    .row{
+        @include flex-block;
+        @include flex-wrap(wrap);
+        margin-left: $row-margin-left;
+        margin-right: $row-margin-right;
+        @include media(md){
+          margin-left: $row-margin-left-md;
+          margin-right: $row-margin-right-md;
+        }
+    }
+}
+
+.pux-container{
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
+    .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12,
+    .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
+    .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
+    .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
+    .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
+    .col-xl-auto{
+        padding-left: $col-padding-left;
+        padding-right: $col-padding-right;
+        @include media(md){
+          padding-left: $col-padding-left-md;
+          padding-right: $col-padding-right-md;
+        }
+    }
+}
+
+.pux-fluid-container{
+    padding-left: $fluid-container-padding-left;
+    padding-right: $fluid-container-padding-right;
+    @include media(md){
+      padding-left: $fluid-container-padding-left-md;
+      padding-right: $fluid-container-padding-right-md;
+    }
+    @include media(xl){
+      padding-left: $fluid-container-padding-left-xl;
+      padding-right: $fluid-container-padding-right-xl;
+    }
+}
+
+header{
+  .header{
+    @include flex-block;
+    @include align-items(center);
+    @include justify-content(space-between);
+    &-logo{
+      a{
+        display:inline-block;
+        span{
+          display:none;
+        }
+        img{
+          height: 5rem !important;
+        }
+      }
+    }
+    &-menu{
+      display:none;
+      position: absolute;
+      top:5rem;
+      z-index: 77;
+      left:0;
+      background: $second-color;
+      width: 100%;
+      @include calc("max-height", "100vh - 5rem");
+      @include media($menu-break){
+        display:block;
+        position: static;
+        background: none;
+        width:auto;
+      }
+      ul{
+        margin:0;
+        padding:0;
+        list-style: none;
+        @include media($menu-break){
+          @include flex-block;
+          @include align-items(center);
+        }
+        li{
+          display: block;
+          position: relative;
+          @include media($menu-break){
+            position: static;
+            margin:0 1rem;
+          }
+          &:last-child{
+            @include media(md){
+              display: none;
+            }
+          }
+          a{
+            display:block;
+            padding:1.5rem 1.5rem;
+            color:$base-black;
+            &:focus,
+            &:hover{
+              color:$main-color;
+              text-decoration: none;
+            }
+          }
+          &.Highlighted{
+            a{
+              color:$main-color;
+            }
+          }
+          ul{
+            background: $second-color;
+            display: none;
+            width:100%;
+            @include opacity(1);
+            visibility: visible;
+            @include transition;
+            @include media($menu-break){
+              position: absolute;
+              width:20rem;
+              visibility: hidden;
+              @include opacity(0);
+              display: block;
+            }
+            li{
+              a{
+                &:focus,
+                &:hover{
+
+                }
+              }
+            }
+          }
+          &:hover{
+            & > ul {
+              visibility: visible;
+              @include opacity(1);
+            }
+          }
+          &.open{
+            .menu-openner{
+              &:after{
+                @include rotate(0deg);
+              }
+            }
+            ul{
+              display:block;
+            }
+          }
+        }
+      }
+      .menu-openner{
+        position: absolute;
+        top:0;
+        right:0;
+        background: $main-color;
+        color:#fff;
+        width: 6rem;
+        height: 6rem;
+        @include media($menu-break){
+          display: none;
+        }
+        &:after,
+        &:before{
+          content:"";
+          width:70%;
+          height:2px;
+          background:#fff;
+          position: absolute;
+          left:15%;
+          top:50%;
+          margin-top:-1px;
+        }
+        &:after{
+          @include rotate(90deg);
+          @include transition;
+        }
+      }
+    }
+    &-button{
+      display: none;
+      @include media(md){
+        display: block;
+      }
+    }
+    &-hamburger{
+      @include media(md){
+        display: none;
+      }
+      .open-menu{
+        width:$hamburger-width;
+        height:$hamburger-width;
+        position: relative;
+        display: block;
+        span{
+          width:$hamburger-width - 1rem;
+          position: absolute;
+          left:0.5rem;
+          height:2px;
+          background: $main-color;
+          margin-top:-1px;
+          top:50%;
+          @include transition;
+          &:before,
+          &:after{
+            content:"";
+            width:$hamburger-width - 1rem;
+            left:0;
+            height:2px;
+            background: $main-color;
+            position: absolute;
+            @include transition;
+          }
+          &:before{
+            top:-1rem;
+          }
+          &:after{
+            bottom:-1rem;
+          }
+        }
+      }
+    }
+    &.open{
+      .header-hamburger{
+        .open-menu{
+          span{
+            background: transparent;
+            &:before{
+              top:0;
+              @include rotate(45deg);
+            }
+            &:after{
+              top:0;
+              @include rotate(-45deg);
+            }
+          }
+        }
+      }
+      .header-menu{
+        display: block;
+      }
+    }
+  }
+}
+
+.EditMode,
+.DesignMode {
+  header {
+    position: static;
+  }
+}
+
+footer{
+  margin: 0;
+  padding: 0;
+  .pux-container{
+    width: 100%;
+  }
+  width: 100%;
+}
+
+.is-xxl{
+    display:none;
+    @include media(xxl){
+        display:block;
+    }
+}

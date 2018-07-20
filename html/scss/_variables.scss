@@ -1,0 +1,156 @@
+
+$px-values: (5px, 10px, 15px, 20px, 25px, 30px, 35px, 40px, 45px, 50px, 55px, 60px, 65px, 70px, 75px, 80px, 85px, 90px, 95px, 100px);
+
+// bootstrap
+$main-left: 15px;
+$main-right: 15px;
+$main-left-md: 4.5rem;
+$main-right-md: 4.5rem;
+
+// container
+$container-max-width: 162rem;
+$container-padding-left: $main-left;
+$container-padding-right: $main-right;
+$container-padding-left-md: $main-left-md;
+$container-padding-right-md: $main-right-md;
+
+// fluid container
+$fluid-container-padding-left: $main-left;
+$fluid-container-padding-right: $main-right;
+$fluid-container-padding-left-md: $main-left-md;
+$fluid-container-padding-right-md: $main-right-md;
+$fluid-container-padding-left-xl: 12rem;
+$fluid-container-padding-right-xl: 12rem;
+
+
+// row
+$row-margin-left: (-$main-left);
+$row-margin-right: (-$main-right);
+$row-margin-left-md: (-$main-left-md);
+$row-margin-right-md: (-$main-right-md);
+
+// col
+$col-padding-left: $main-left;
+$col-padding-right: $main-right;
+$col-padding-left-md: $main-left-md;
+$col-padding-right-md: $main-right-md;
+
+// typography
+$font-family: 'Roboto', sans-serif;
+$font-size: 16px;
+
+// perex
+$font-size-perex: 22px;
+$min-font-size-perex: 18px;
+$line-height-perex: 26px;
+$min-line-height-perex: 22px;
+
+// small text
+$font-size-small: 14px;
+$min-font-size-small: 14px;
+$line-height-small: 18px;
+$min-line-height-small: 18px;
+
+// main colors
+$color-link: #5558c5;
+$main-color: #00bcb4;
+$second-color: #b7b7b7;
+$color-line: #f1f1f1;
+$base-black: #000;
+$base-white: #fff;
+
+// button primary
+$btn-primary-background: $main-color;
+$btn-primary-color: $base-white;
+
+// button default
+$btn-default-background: $second-color;
+$btn-default-color: $base-black;
+
+// ul, li
+$ul-bullet: $main-color;
+$ol-number: $main-color;
+
+// table
+$table-even-background: #f8f8f8;
+$table-tr-border: #f1f1f1;
+
+// menu
+$hamburger-width: 6rem;
+$menu-break: "md";
+
+// form
+$color-placeholder: #000;
+
+// inputs
+$border-color: #f1f1f1;
+$input-background: #f1f1f1;
+$focus-border-color: $main-color;
+$input-height: 50px;
+$textarea-height: $input-height * 3;
+
+// selectric
+$select-background: $input-background;
+$select-color: $base-black;
+$select-border: $input-background;
+$select-border-focus: $main-color;
+$select-arrow-color: $main-color;
+$select-arrow-code: "";
+$select-use-triangle: 1;
+$select-height: $input-height;
+
+// datepicker
+$datepick-today-background: $second-color;
+$datepick-today-color:$base-white;
+$datepick-active-background: $main-color;
+$datepick-active-color: $base-white;
+
+// upload
+$upload-background: $main-color;
+$upload-color: $base-white;
+$file-name-background: $second-color;
+$file-name-color: $base-black;
+
+// form radio
+$radio-background: #eeeff4;
+$radio-border: #eeeff4;
+$radio-active-border: $main-color;
+$radio-after-background: $main-color;
+
+// form checkbox
+$checkbox-background: #eeeff4;
+$checkbox-border: #eeeff4;
+$checkbox-active-border: $main-color;
+$checkbox-after-background: $main-color;
+
+// form error
+$error-input-border: #d40511;
+$error-label-color: #d40511;
+$error-blink-start: #fff;
+$error-blink-final: #fec7ca;
+$use-blink-error: 1;
+
+//scale ratios
+$scale-base-size: 10px;
+
+$scale-ratio-xxs: 0.5;
+$scale-ratio-xs: 0.55;
+$scale-ratio-sm: 0.6;
+$scale-ratio-md: 0.75;
+$scale-ratio-lg:  0.8;
+$scale-ratio-xl: 0.9;
+$scale-ratio-xxl: 1;
+
+// scale
+
+$scale-xxl: 1;
+$scale-xl: 0.8;
+$scale-lg: 0.7;
+$scale-md: 0.6;
+$scale-sm: 0.5;
+$scale-xs: 0.4;
+$scale-xxs: 0.4;
+
+$min-font-size: 14px;
+$min-padding: 10px;
+$min-margin: 10px;

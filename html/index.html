@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <title>Spolehlivá realitka</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="./scss/style.min.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header" id="header" style="width:85%;margin:auto;">
+        <div class="header-logo">
+          <img src="./images/motylek_maly_o.png" alt="Motýlek">
+        </div>
+        <div class="header-menu">
+          <ul>
+            <li class="Highlighted"><a href="#">Proč my</a></li>
+            <li><a href="#">Náš tým</a></li>
+            <li><a href="#">Kariéra</a></li>
+            <li><a href="#">Nemovitosti</a></li>
+            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Odměna za tip</a></li>
+          </ul>
+        </div>
+        <div class="header-button blue-orange-button">
+          <a href="#">Odměna za tip</a>
+        </div>
+        <div class="header-hamburger" onclick="openNav();" id="hamburger">
+          <div class="open-menu">
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="pux-container text-center">
+        <div id="Logo">
+          <h1>Spolehlivá<br>REALITKA</h1>
+          <img src="./images/logo_velke.png" alt="Logo">
+        </div>
+        <button>
+          <a href="#" class="blue-orange-button">Prodáváte nemovitost?</a>
+        </button>
+      </div>
+
+      <div class="pux-container text-center">
+        <h3>Obchod s realitami děláme jinak</h3>
+        <hr>
+        <p>Nepotrpíme si na závazky. Věříme, že úspěšně obchodovat se dá rychle a efektivně k plné spokojenosti klienta.</p>
+        <p>Naším cílem jsou uskutečněné prodeje a pronájmy, ne dlouho trvající smluvní vztahy bez výsledku</p>
+        <p>Ruku na to.</p>
+        <img src="" alt="Ruku na to">
+      </div>
+    </header>
+    <main>
+      <div class="pux-container text-center">
+        <h3>Proč vsadit na spolupráci s námi</h3>
+        <hr>
+        <div class="row text-left">
+          <div class="col-xs-12 col-md-6">
+            <h4>Spolupráce bez zbytečných závazků</h4>
+            <p>S klienty běžně uzavíráme smlouvu na jeden měsíc. Při dobře zvolené ceně a správné prezentaci nemovitosti se nám podaří zájemce zajistit již během prvního týdne. V Brně často ještě rychleji.</p>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <h4>Počítáme si nižší provizi</h4>
+            <p>Jsme tým zkušených makléřů bez složité firemní struktury, takže si můžeme dovolit účtovat nižší odměnu za zprostředkování při zachování kvality služeb na nejvyšší úrovni.</p>
+          </div>
+        </div>
+        <div class="row text-left">
+          <div class="col-xs-12 col-md-6">
+            <h4>Zařídíme veškeré formality</h4>
+            <p>V rámci spolupráce s advokátní kanceláří zdarma zajistíme sepsání veškerých smluv, advokátní úschovu, ověření podpisů a uhradíme správní poplatek na katastru nemovitostí.</p>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <h4>Máme ověřené know-how</h4>
+            <p>Všichni naši makléři jsou proškoleni a dělají to, co dobře umí. Práci ve stylu pokus-omyl si nemůžeme dovolit.</p>
+          </div>
+        </div>
+        <button>Dozvědět se více</button>
+      </div>
+      <div class="pux-container text-center">
+        <h3>Naši makléři</h3>
+        <hr>
+        <div class="row">
+          <div class="col-xs-12 col-md-3">
+            <img src="./images/jan_maly.png" alt="Jan Malý">
+            <h4>Jan Malý</h4>
+            <p>info@spolehlivarealitka.cz</p>
+          </div>
+          <div class="col-xs-12 col-md-3">
+            <img src="./images/jan_maly.png" alt="Jan Malý">
+            <h4>Jan Malý</h4>
+            <p>info@spolehlivarealitka.cz</p>
+          </div>
+          <div class="col-xs-12 col-md-3">
+            <img src="./images/jan_maly.png" alt="Jan Malý">
+            <h4>Jan Malý</h4>
+            <p>info@spolehlivarealitka.cz</p>
+          </div>
+          <div class="col-xs-12 col-md-3">
+            <img src="./images/jan_maly.png" alt="Jan Malý">
+            <h4>Jan Malý</h4>
+            <p>info@spolehlivarealitka.cz</p>
+          </div>
+        </div>
+        <button>Všichni makléři</button>
+      </div>
+      <div class="pux-container text-center">
+        <h4>Jsme muži činu a hovoří za nás i čísla.</h4>
+        <hr>
+        <div class="row">
+          <div class="col-xs-12 col-md-3">
+            <h1>30</h1>
+            <h4>milionů Kč</h4>
+            <p>to je roční objem našich transakcí</p>
+          </div>
+          <div class="col-xs-12 col-md-3">
+            <h1>100</h1>
+            <h4>klientům</h4>
+            <p>jsme již pomohli najít nový domov, nebo prodat nemovitost</p>
+          </div>
+          <div class="col-xs-12 col-md-3">
+            <h1>00</h1>
+            <h4>benefit</h4>
+            <p>jsme již pomohli najít nový domov, nebo prodat nemovitost</p>
+          </div>
+        </div>
+      </div>
+      <div class="pux-container">
+        <div class="row">
+          <div class="col-xs-12 col-md-4">
+            <img src="./images/gentleman.png" alt="I want you!">
+          </div>
+          <div class="col-xs-12 col-md-8">
+            <h4>Staňte se s námi gentlemanem ve světě realit</h4>
+            <hr>
+            <h5>Pomozte našim klientům s prodejem a nebo pronájmem nemovitostí.</h5>
+            <p></p>
+            <button type="button" name="button">Stát se gentlemanem</button>
+          </div>
+        </div>
+      </div>
+      <div class="pux-container text-center">
+        <h3>Nabídka nemovitostí</h3>
+        <hr>
+        <div class="row">
+          <div class="col-xs-12 col-md-3">
+            <img src="./images/dum.png" alt="Nemovitost">
+            <span>Více informací</span>
+            <span>8 500 000</span>
+          </div>
+          <div class="col-xs-12 col-md-3">
+            <img src="./images/dum.png" alt="Nemovitost">
+            <span>Více informací</span>
+            <span>8 500 000</span>
+          </div>
+          <div class="col-xs-12 col-md-3">
+            <img src="./images/dum.png" alt="Nemovitost">
+            <span>Více informací</span>
+            <span>8 500 000</span>
+          </div>
+          <div class="col-xs-12 col-md-3">
+            <img src="./images/dum.png" alt="Nemovitost">
+            <span>Více informací</span>
+            <span>8 500 000</span>
+          </div>
+        </div>
+        <button>Všechny nemovitosti</button>
+      </div>
+    </main>
+    <footer>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <div style="padding:30px 50px">
+
+
+          <h4>Kontaktujte nás</h4>
+          <form action="index.html" method="post">
+            <div class="row">
+              <input type="text" placeholder="Jméno" class="form-control">
+              <input type="text" placeholder="Telefon" class="form-control">
+              <textarea name="name" placeholder="Váš dotaz"></textarea>
+            </div>
+            <div class="row">
+              <input type="email" placeholder="Váš e-mail:" class="form-control col-8">
+              <button type="submit" name="form-button" class="col-4">Odeslat</button>
+            </div>
+            <div class="">
+              <input type="checkbox" class="form-check-input" id="checkbox">
+              <label class="form-check-label" style="margin-left:20px" for="checkbox">Souhlasím se zpracováním osobních údajů.</label>
+            </div>
+          </form>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-8">
+          <div class="row">
+            <div class="col-xs-12 col-md-4">
+              <img src="./images/logo_stredni.png" alt="Logo">
+            </div>
+            <div class="col-xs-12 col-md-4">
+              <h4>Kontakt</h4>
+              <p>GSM: +420 601 188 704</p>
+              <p>E-MAIL:</p>
+            </div>
+            <div class="col-xs-12 col-md-4">
+              <h4>Adresa</h4>
+              <p>Spolehlivá realitka s.r.o.</p>
+              <p>U červeného mlýna 64/1</p>
+              <p>Brno 612 00</p>
+              <p>(parkování možné v areálu)</p>
+            </div>
+          </div>
+          Spolehlivá realitka s.r.o. | Firemní web Puxdesign
+        </div>
+      </div>
+      <div class="row" style="margin:0;padding:0">
+        <div class="col-xs-12 col-md-4" style="margin:0;padding:0!important">
+          <img src="./images/sidlo.png" style="width:100%; margin:0;padding:0!important" alt="Sídlo společenosti">
+        </div>
+        <div class="col-xs-12 col-md-8" style="margin:0;padding:0!important">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2606.2075577336905!2d16.599443715687066!3d49.21559067932411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4712946d1c3ac167%3A0x8b6c2b2329812f6e!2sU+%C4%8Cerven%C3%A9ho+ml%C3%BDna+64%2F1%2C+612+00+Brno-Kr%C3%A1lovo+Pole-Ponava!5e0!3m2!1scs!2scz!4v1532106734096" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

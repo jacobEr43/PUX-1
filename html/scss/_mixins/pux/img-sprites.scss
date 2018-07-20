@@ -1,0 +1,43 @@
+@mixin img-sprite-item($icon, $map, $spriteType) {
+  $iconData: map-get($map, $icon);
+
+  // extend default img file background
+  @extend %#{map-get(map-get($map, $spriteType), "commonName")};
+
+  background-position: map-get($iconData, "backgroundX") map-get($iconData, "backgroundY");  
+  width: map-get($iconData, "width");
+  height: map-get($iconData, "height");
+}
+
+@mixin img-sprite($icon, $map: null) {
+  
+  // if map is empty, use default map
+  @if($map == null) {
+      $map: $img-sprite1;
+  }
+
+  @if not map-has-key($map, $icon) {
+    @error 'No IMG sprite icon found for "#{$icon}" in the map.';
+  }
+
+  @include img-sprite-item($icon, $map, "sprite");
+}
+
+@mixin img-sprite-retina($icon, $map: null) {
+  // if map is empty, use default map
+  @if($map == null) {
+      $map: $img-sprite1;
+  }
+
+  $icon2x: $icon + '-2x';
+
+  @if not map-has-key($map, $icon) {
+    @error 'No IMG sprite icon found for "#{$icon}" in the map.';
+  }
+
+  @if not map-has-key($map, $icon2x) {
+    @error 'No retina IMG sprite icon found for "#{$icon2x}" in the map.';
+  }
+
+  @include img-sprite-item($icon, $map, "retinaSprite");
+}

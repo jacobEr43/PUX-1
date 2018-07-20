@@ -1,0 +1,30 @@
+@mixin svg-sprite($icon, $multiply: 1, $map: null) {
+
+  // test if $multiply argument is number or map of sprite icons
+  @if(type-of($multiply) != 'number') {
+      $map: $multiply;
+      $multiply: 1;
+  }
+
+  // if map is empty, use default map
+  @if($map == null) {
+      $map: $svg-sprite1;
+  }
+
+  @if not map-has-key($map, $icon) {
+    @error "No SVG sprite icon found for #{$icon} in $map map.";
+  }
+
+  // extend default SVG file background
+  @extend %#{map-get(map-get($map, sprite), commonName)};
+
+  // generate icon data
+  $iconData: map-get($map, $icon);
+  $width: map-get($iconData, height);
+  @if($multiply != 1) {
+    background-size: round(map-get(map-get($map, sprite), width) * $multiply) round(map-get(map-get($map, sprite), height) * $multiply);
+  }
+  background-position: map-get($iconData, backgroundX) map-get($iconData, backgroundY) !important;
+  /*width: round(map-get($iconData, width) * $multiply);
+  height: round(map-get($iconData, height) * $multiply);*/
+}

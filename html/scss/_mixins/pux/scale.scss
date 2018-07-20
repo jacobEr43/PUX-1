@@ -1,0 +1,291 @@
+
+@import "css-rules.scss";
+@import "../../_variables.scss";
+
+@function calc-scale($value, $min, $scale){
+
+    @if ($value >= $min) {
+        $result: ceil($value * $scale);
+        @if $result > $min {
+            @return $result + 0px
+        }
+        @else {
+            @return $min + 0px
+        }
+    }
+    @else {
+        @return $value + 0px
+    }
+
+}
+
+@function strip-unit($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+@mixin pux-scale($key, $value, $min) {
+  #{$key}: calc-scale($value, $min, $scale-xxs);
+  @include media(xs){
+    #{$key}: calc-scale($value, $min, $scale-xs);
+  }
+  @include media(sm){
+    #{$key}: calc-scale($value, $min, $scale-sm);
+  }
+  @include media(md){
+    #{$key}: calc-scale($value, $min, $scale-md);
+  }
+  @include media(lg){
+    #{$key}: calc-scale($value, $min, $scale-lg);
+  }
+  @include media(xl){
+    #{$key}: calc-scale($value, $min, $scale-xl);
+  }
+  @include media(xxl){
+    #{$key}: calc-scale($value, $min, $scale-xxl);
+  }
+}
+
+@mixin pux-scale-font($value, $min: $min-font-size, $line-height: 0, $min-line-height:($min-font-size+4)) {
+  @include font-size(calc-scale($value, $min, $scale-xxs), calc-scale($line-height, $min-line-height, $scale-xxs));
+  @include media(xs){
+      @include font-size(calc-scale($value, $min, $scale-xs), calc-scale($line-height, $min-line-height, $scale-xs));
+  }
+  @include media(sm){
+      @include font-size(calc-scale($value, $min, $scale-sm), calc-scale($line-height, $min-line-height, $scale-sm));
+  }
+  @include media(md){
+      @include font-size(calc-scale($value, $min, $scale-md), calc-scale($line-height, $min-line-height, $scale-md));
+  }
+  @include media(lg){
+      @include font-size(calc-scale($value, $min, $scale-lg), calc-scale($line-height, $min-line-height, $scale-lg));
+  }
+  @include media(xl){
+     @include font-size(calc-scale($value, $min, $scale-xl), calc-scale($line-height, $min-line-height, $scale-xl));
+  }
+  @include media(xxl){
+      @include font-size(calc-scale($value, $min, $scale-xxl), calc-scale($line-height, $min-line-height, $scale-xxl));
+  }
+}
+
+@mixin pux-scale-padding($top, $right, $bottom, $left, $min: $min-padding){
+    padding: calc-scale($top, $min, $scale-xxs) calc-scale($right, $min, $scale-xxs) calc-scale($bottom, $min, $scale-xxs) calc-scale($left, $min, $scale-xxs);
+    @include media(xs){
+        padding: calc-scale($top, $min, $scale-xs) calc-scale($right, $min, $scale-xs) calc-scale($bottom, $min, $scale-xs) calc-scale($left, $min, $scale-xs);
+    }
+    @include media(sm){
+        padding: calc-scale($top, $min, $scale-sm) calc-scale($right, $min, $scale-sm) calc-scale($bottom, $min, $scale-sm) calc-scale($left, $min, $scale-sm);
+    }
+    @include media(md){
+        padding: calc-scale($top, $min, $scale-md) calc-scale($right, $min, $scale-md) calc-scale($bottom, $min, $scale-md) calc-scale($left, $min, $scale-md);
+    }
+    @include media(lg){
+        padding: calc-scale($top, $min, $scale-lg) calc-scale($right, $min, $scale-lg) calc-scale($bottom, $min, $scale-lg) calc-scale($left, $min, $scale-lg);
+    }
+    @include media(xl){
+        padding: calc-scale($top, $min, $scale-xl) calc-scale($right, $min, $scale-xl) calc-scale($bottom, $min, $scale-xl) calc-scale($left, $min, $scale-xl);
+    }
+    @include media(xxl){
+        padding: calc-scale($top, $min, $scale-xxl) calc-scale($right, $min, $scale-xxl) calc-scale($bottom, $min, $scale-xxl) calc-scale($left, $min, $scale-xxl);
+    }
+}
+
+@mixin pux-scale-margin($top, $right, $bottom, $left, $min: $min-padding){
+    margin: calc-scale($top, $min, $scale-xxs) calc-scale($right, $min, $scale-xxs) calc-scale($bottom, $min, $scale-xxs) calc-scale($left, $min, $scale-xxs);
+    @include media(xs){
+        margin: calc-scale($top, $min, $scale-xs) calc-scale($right, $min, $scale-xs) calc-scale($bottom, $min, $scale-xs) calc-scale($left, $min, $scale-xs);
+    }
+    @include media(sm){
+        margin: calc-scale($top, $min, $scale-sm) calc-scale($right, $min, $scale-sm) calc-scale($bottom, $min, $scale-sm) calc-scale($left, $min, $scale-sm);
+    }
+    @include media(md){
+        margin: calc-scale($top, $min, $scale-md) calc-scale($right, $min, $scale-md) calc-scale($bottom, $min, $scale-md) calc-scale($left, $min, $scale-md);
+    }
+    @include media(lg){
+        margin: calc-scale($top, $min, $scale-lg) calc-scale($right, $min, $scale-lg) calc-scale($bottom, $min, $scale-lg) calc-scale($left, $min, $scale-lg);
+    }
+    @include media(xl){
+        margin: calc-scale($top, $min, $scale-xl) calc-scale($right, $min, $scale-xl) calc-scale($bottom, $min, $scale-xl) calc-scale($left, $min, $scale-xl);
+    }
+    @include media(xxl){
+        margin: calc-scale($top, $min, $scale-xxl) calc-scale($right, $min, $scale-xxl) calc-scale($bottom, $min, $scale-xxl) calc-scale($left, $min, $scale-xxl);
+    }
+}
+
+@function calc-responzive-rem($font-size, $scale-ratio) {
+		$font-size-px: strip-unit($font-size)/$scale-ratio;
+		$font-size-rem: $font-size-px/10#{rem};
+		@return $font-size-rem;
+}
+
+@function str-split($string, $separator) {
+
+    $split-arr: ();
+
+    $index : str-index($string, $separator);
+
+    @while $index != null {
+
+        $item: str-slice($string, 1, $index - 1);
+
+        $split-arr: append($split-arr, $item);
+
+        $string: str-slice($string, $index + 1);
+
+        $index : str-index($string, $separator);
+    }
+
+    $split-arr: append($split-arr, $string);
+
+    @return $split-arr;
+}
+
+@function get-scale-ratio($breakpoint) {
+		$scale: $scale-ratio-xxs;
+
+			@if $breakpoint == xxs {
+				$scale: $scale-ratio-xxs;
+		} @else if $breakpoint == xs{
+				$scale: $scale-ratio-xs;
+		} @else if $breakpoint == sm {
+				$scale: $scale-ratio-sm;
+		} @else if $breakpoint == md {
+				$scale: $scale-ratio-md;
+		} @else if $breakpoint == lg {
+				$scale: $scale-ratio-lg;
+		} @else if $breakpoint == xl {
+				$scale: $scale-ratio-xl;
+		} @else if  $breakpoint == xxl {
+				$scale: 1;
+		} @else {
+				$scale: $scale-ratio-xxs;
+		}
+
+		@return $scale;
+}
+
+
+@function rem($scale-ratio,$size-values...) {
+	$i:0;
+	$temp: 0;
+  $space: " ";
+
+		$scale: get-scale-ratio($scale-ratio);
+
+    @each $current-value in $size-values {
+
+        @if(type-of($current-value) == number) {
+            $temp: calc-responzive-rem($current-value, $scale);
+        }
+      	@else {
+            $temp: $current-value;
+        }
+            $i: $i#{$space}$temp;
+		}
+
+  @return str-slice($i, 3);
+}
+
+
+@function px-in-rem($scale-ratio,$value) {
+		$scale: get-scale-ratio($scale-ratio);
+		@return $value*$scale;
+}
+
+@mixin pux-static-font($font-size) {
+			font-size: rem(xxs, $font-size);
+		@include media(xs){
+			font-size: rem(xs, $font-size);
+		}
+		@include media(sm){
+			font-size: rem(sm, $font-size);
+		}
+		@include media(md){
+			font-size: rem(md, $font-size);
+		}
+		@include media(lg){
+			font-size: rem(lg, $font-size);
+		}
+		@include media(xl){
+			font-size: rem(xl, $font-size);
+		}
+		@include media(xxl){
+			font-size: rem(xxl, $font-size);
+		}
+}
+
+@mixin pux-static-size($key, $font-size...) {
+				#{$key}: rem(xxs, $font-size...);
+		@include media(xs){
+				#{$key}: rem(xs, $font-size...);
+		}
+		@include media(sm){
+				#{$key}: rem(sm, $font-size...);
+		}
+		@include media(md){
+				#{$key}: rem(md, $font-size...);
+		}
+		@include media(lg){
+	    	#{$key}: rem(lg, $font-size...);
+	  }
+		@include media(xl){
+				#{$key}: rem(xl, $font-size...);
+		}
+	  @include media(xxl){
+	    	#{$key}: rem(xxl, $font-size...);
+	  }
+}
+
+@mixin pux-scale-with-min($property, $value-init, $min-value-init) {
+		$breakpoints: ("xxs","xs","sm","md","lg","xl","xxl");
+		$min-value: strip-unit($min-value-init);
+		$value: strip-unit($value-init);
+		$isDone: "false";
+
+		@each $one-breakpoint in $breakpoints {
+				$current-value: px-in-rem($one-breakpoint, $value);
+
+				@if($min-value > $current-value) {
+						@include media($one-breakpoint){
+								#{$property}: rem($one-breakpoint, $min-value-init);
+						}
+				}
+				@else {
+						@if($isDone == "false") {
+								@include media($one-breakpoint){
+										#{$property}: rem(xxl, $value-init);
+								}
+						}
+						$isDone: "true";
+				}
+		}
+}
+
+@mixin pux-scale-from($key,$from, $size) {
+		$breakpoints: ("xxs","xs","sm","md","lg","xl","xxl");
+		$i: 1;
+		$isBreakpoint: false;
+		$fromXxs: false;
+		$firstChar: str-slice($from, 0, 1);
+		@if($firstChar == "-") {
+				$from: str-slice($from, 2);
+				$isBreakpoint: true;
+				$fromXxs: true;
+		}
+
+		@each $one-breakpoint in $breakpoints {
+				@if(nth($breakpoints, $i) == $from AND $fromXxs == false) {
+						$isBreakpoint: true;
+				}
+
+				@if ($isBreakpoint == true){
+						@include media($one-breakpoint){
+							#{$key}: rem($one-breakpoint, $size);
+						}
+				}
+
+				@if(nth($breakpoints, $i) == $from AND $fromXxs == true) {
+						$isBreakpoint: false;
+				}
+				$i: $i + 1;
+		}
+}
