@@ -10,3 +10,95 @@
 @import "datepicker.scss";
 
 @import "print.scss";
+
+body{
+  color: $second-color;
+}
+
+.blue-orange-button{
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background-color: $second-color;
+  color: $main-color;
+  border: 1px solid $main-color;
+  &:hover,
+  &:focus{
+      background-color: $main-color;
+      color: $second-color;
+  }
+}
+
+.classic-button{
+  text-decoration: none;
+  padding: 2rem 3rem;
+  &.orange{
+    background-color: $main-color;
+    color: $base-white;
+  }
+  &.orange:hover,
+  &.orange:focus{
+      background-color: darken($main-color,10);
+  }
+  &.blue{
+    background-color: $second-color;
+    color: $base-white;
+  }
+  &.blue:hover,
+  &.blue:focus{
+      background-color: $main-color;
+      //background-color: lighten($second-color,10);
+  }
+}
+
+.rounded-butt{
+  padding: 1rem 3rem;
+  border-radius: 5rem;
+  text-decoration: none;
+  &.white{
+    color: $base-white;
+    border: 1px solid $base-white;
+  }
+  &.white:hover,
+  &.white:focus{
+      background-color: $base-white;
+      color: $main-color;
+  }
+  &.orange{
+    color: $main-color;
+    border: 1px solid $main-color;
+  }
+  &.orange:hover,
+  &.orange:focus{
+      background-color: $main-color;
+      color: $base-white;
+  }
+}
+
+.main-color-bgr{
+  background-color: $main-color;
+}
+
+.second-color-bgr{
+  background-color: $second-color;
+}
+
+.orange{
+  color: $main-color;
+}
+
+hr{
+  margin: 40px auto;
+  width: 200px;
+  border: none;
+  height: 2px;
+  &.orange{
+    background-color: $main-color;
+  }
+  &.blue{
+    background-color:$second-color;
+  }
+}
+
+h4{
+  font-size: 2rem;
+}
