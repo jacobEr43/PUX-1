@@ -295,14 +295,19 @@ header{
   }
 }
 
+main{
+  margin-top: -35rem;
+}
+
 footer{
   margin: 0;
   padding: 0;
   background-color: $main-color;
-  .pux-container{
-    width: 100%;
-  }
   width: 100%;
+  .row{
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .is-xxl{

@@ -15,6 +15,10 @@ body{
   color: $second-color;
 }
 
+.header-logo{
+  z-index: 1000;
+}
+
 .blue-orange-button{
   text-decoration: none;
   padding: 1rem 2rem;
@@ -74,6 +78,39 @@ body{
   }
 }
 
+.building{
+  margin-left: 20px;
+  width: 90%;
+  div{
+    position: relative;
+    .picture{
+      width: 100%;
+    }
+    .badg{
+      padding: 15px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $second-color;
+      z-index: 600;
+    }
+  }
+  div{
+    span{
+      padding: 1.5rem 2rem;
+      &.button{
+        color: $base-white;
+        background-color: $main-color;
+      }
+    }
+    &:hover{
+      color: $base-white;
+      background-color: $main-color;
+      transition: 0.5s;
+    }
+  }
+}
+
 .main-color-bgr{
   background-color: $main-color;
 }
@@ -84,6 +121,133 @@ body{
 
 .orange{
   color: $main-color;
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+#header{
+  width: 85%;
+  margin: auto;
+}
+
+#head-logo{
+  &:hover,
+  &:focus{
+    content: url('../images/logo.png');
+    max-width: 73px;
+  }
+}
+
+#Logo{
+  z-index: 9;
+  img{
+    margin-top:20rem;
+    margin-bottom:-3.5rem;
+    z-index:9;
+    position:relative;
+  }
+}
+
+#jacket{
+  //padding-bottom: 64px;
+  img{
+    z-index:-1;
+  }
+  div{
+    margin-top: -40rem;
+    margin-bottom:35rem;
+    #move{
+      margin-top:20rem;
+      a{
+        position:relative;
+        right:1rem;
+        bottom:7rem;
+        @include media(md){
+          right: 0.5rem;
+          bottom: 5rem;
+        }
+      }
+    }
+  }
+  #deal{
+    padding-top: 15rem;
+    padding-bottom: 64px;
+  }
+}
+
+#team{
+  .row{
+    div{
+      div{
+        padding: 0.5rem;
+        div{
+          position: relative;
+          .portrait{
+            //padding: 0.01rem;
+            border-radius:1000px;
+          }
+          .tie{
+            opacity: 0;
+            margin-top: -6rem;
+            transform: scale(0.3);
+            transition: 0.5s;
+            @include media(md){
+              margin-top: -5rem;
+            }
+          }
+        }
+        .name{
+          h4,
+          p{
+            font-weight: bold!important;
+          }
+        }
+        &:hover{
+          color: $base-white;
+          div.image{
+            .tie{
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#numbers{
+  .row{
+    div{
+      h1{
+        font-size: 10rem;
+      }
+      h4{
+        font-weight: bold;
+      }
+      &.framed{
+        @include media(md){
+          border-left:2px solid $second-color;
+          border-right:2px solid $second-color;
+        }
+      }
+    }
+  }
+}
+
+#foot-colums{
+  height:96.5%;
+  padding-top:12.5rem;
+  width:100%;
+  .text-colum{
+    padding-left:30px
+  }
 }
 
 hr{
@@ -101,4 +265,41 @@ hr{
 
 h4{
   font-size: 2rem;
+}
+
+form{
+  .row{
+    input,
+    textarea{
+      padding: 0 20px;
+      font-weight: bold;
+      border: 2px solid $main-color;
+      background-color: lighten($main-color, 30);
+      &::placeholder{
+        color: lighten($base-black, 60);
+      }
+    }
+    textarea{
+      padding:20px;
+    }
+    &.check{
+      input{
+        margin: 10px 0;
+        width: 30px;
+        height: 30px;
+        color:white;
+
+      }
+      label{
+        margin: 15px 0;
+        margin-left:5px;
+      }
+    }
+    button{
+      width:33.333%;
+      padding-top:3.5px;
+      padding-bottom:3.5px;
+      border:0;
+    }
+  }
 }
