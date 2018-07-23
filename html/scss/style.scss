@@ -161,6 +161,18 @@ body{
   text-transform: uppercase;
 }
 
+.animate-fade{
+  animation: animatefade 5s;
+}
+
+@keyframes animatefade {
+  from {
+    @include opacity(0);
+  } to {
+    @include opacity(1);
+  }
+}
+
 #header{
   width: 85%;
   margin: auto;
@@ -169,8 +181,8 @@ body{
 #head-logo{
   &:hover,
   &:focus{
-    content: url('../images/logo.png');
     max-width: 73px;
+    content: url('../images/logo.png');
   }
 }
 
@@ -323,6 +335,10 @@ form{
       padding-top:3.5px;
       padding-bottom:3.5px;
       border:0;
+      cursor: pointer;
+      &:hover{
+        background-color: darken($main-color,5)!important;
+      }
     }
   }
 }
