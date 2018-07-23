@@ -121,9 +121,9 @@ header{
             }
           }
           a{
-            display:block;
+            display: block;
             position: relative;
-            padding:1.5rem 1.5rem;
+            padding: 1.5rem 1.5rem;
             color:$base-white;
             &:after {
               content: "";
@@ -133,24 +133,20 @@ header{
               bottom: 0;
               left: 0;
               background-color: $main-color;
-              visibility: hidden;
-              -webkit-transform: scaleX(0);
-              transform: scaleX(0);
-              -webkit-transition: 0.4s ease-out all .1s;
-              transition: 0.4s ease-out all .1s;
+              @include opacity(0);
+              @include transform(scaleX(0));
+              @include transition(400ms);
             }
             &:hover:after,
             &:focus:after {
-              visibility: visible;
-              -webkit-transform: scaleX(1);
-              transform: scaleX(1);
+              @include opacity(1);
+              @include transform(scaleX(1));
             }
           }
           &.Highlighted{
             a:after{
-              visibility: visible;
-              -webkit-transform: scaleX(1);
-              transform: scaleX(1);
+              @include opacity(1);
+              @include transform(scaleX(1))
             }
           }
           ul{

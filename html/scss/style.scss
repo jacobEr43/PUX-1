@@ -8,6 +8,7 @@
 @import "project-form.scss";
 @import "selectric.scss";
 @import "datepicker.scss";
+@import "checkbox.scss";
 
 @import "print.scss";
 
@@ -20,11 +21,12 @@ body{
 }
 
 .blue-orange-button{
-  text-decoration: none;
   padding: 1rem 2rem;
+  text-decoration: none;
   background-color: $second-color;
   color: $main-color;
   border: 1px solid $main-color;
+  @include transition;
   &:hover,
   &:focus{
       background-color: $main-color;
@@ -33,8 +35,9 @@ body{
 }
 
 .classic-button{
-  text-decoration: none;
   padding: 2rem 3rem;
+  text-decoration: none;
+  @include transition;
   &.orange{
     background-color: $main-color;
     color: $base-white;
@@ -56,8 +59,9 @@ body{
 
 .rounded-butt{
   padding: 1rem 3rem;
-  border-radius: 5rem;
   text-decoration: none;
+  @include border-radius(5rem);
+  @include transition;
   &.white{
     color: $base-white;
     border: 1px solid $base-white;
@@ -95,18 +99,44 @@ body{
       z-index: 600;
     }
   }
-  div{
+  a{
+    position: relative;
+    display: block;
+    @include transition;
     span{
       padding: 1.5rem 2rem;
+      height: 7.5rem;
+      @include media(md){
+        height: 5.5rem;
+      }
       &.button{
         color: $base-white;
         background-color: $main-color;
       }
     }
     &:hover{
-      color: $base-white;
+      color: $base-white!important;
+      @include transition(500ms);
+    }
+    &:after {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      width: 0px;
+      height: 7.5rem;
+      bottom: -7.5rem;
+      right: 0;
       background-color: $main-color;
-      transition: 0.5s;
+      @include transition(600ms);
+      @include media(md){
+        height: 5.5rem;
+        bottom: -5.5rem;
+      }
+    }
+    &:hover:after,
+    &:focus:after {
+      color: $base-white;
+      width: 100%;
     }
   }
 }
@@ -190,13 +220,13 @@ body{
           position: relative;
           .portrait{
             //padding: 0.01rem;
-            border-radius:1000px;
+            @include border-radius(1000px);
           }
           .tie{
             opacity: 0;
             margin-top: -6rem;
-            transform: scale(0.3);
-            transition: 0.5s;
+            @include transform(scale(0.3));
+            @include transition(500ms);
             @include media(md){
               margin-top: -5rem;
             }
@@ -212,8 +242,8 @@ body{
           color: $base-white;
           div.image{
             .tie{
-              opacity: 1;
-              transform: scale(1);
+              @include opacity(1);
+              @include transform(scale(1));
             }
           }
         }
@@ -283,16 +313,9 @@ form{
       padding:20px;
     }
     &.check{
-      input{
-        margin: 10px 0;
-        width: 30px;
-        height: 30px;
-        color:white;
-
-      }
+      position: relative;
       label{
-        margin: 15px 0;
-        margin-left:5px;
+        margin: 10px 35px 0px 2px;
       }
     }
     button{
