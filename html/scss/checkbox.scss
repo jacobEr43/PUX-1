@@ -3,63 +3,50 @@
 @import "_mixins/pux/scale.scss";
 @import "_variables.scss";
 
-
 #checkbox {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-#checkbox input {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  input {
     position: absolute;
     @include opacity(0);
     cursor: pointer;
-}
-
-.checkmark {
+    &:checked ~ .checkmark:after {
+      display: block;
+    }
+  }
+  .checkmark {
     position: absolute;
     top: 0;
     left: 0;
     height: 25px;
     width: 25px;
     background-color: lighten($main-color,30);
-}
-
-#checkbox:hover input ~ .checkmark {
+    &:after {
+      position: absolute;
+      display: none;
+    	content: "+";
+      left: 11px;
+      top: 1px;
+      color: $second-color;
+      font-weight: bold;
+      width: 5px;
+      height: 10px;
+      @include transform(rotate(45deg));
+    }
+  }
+  &:hover input ~ .checkmark {
     background-color: lighten($main-color,20);
-}
-
-#checkbox input:checked ~ .checkmark {
+  }
+  & input:checked ~ .checkmark {
     background-color: lighten($main-color,30);
-}
-
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-#checkbox input:checked ~ .checkmark:after {
+  }
+  &:checked ~ .checkmark:after {
     display: block;
-}
-
-
-#checkbox:checked ~ .checkmark:after {
-    display: block;
-}
-
-#checkbox .checkmark:after {
-	content: "+";
-    left: 11px;
-    top: 1px;
-    color: $second-color;
-    font-weight: bold;
-    width: 5px;
-    height: 10px;
-    @include transform(rotate(45deg));
+  }
 }
