@@ -60,12 +60,12 @@ $base-black: #000;
 $base-white: #fff;
 
 // button primary
-$btn-primary-background: $main-color;
-$btn-primary-color: $base-white;
+$btn-primary-background: transparent;
+$btn-primary-color: $main-color;
 
 // button default
 $btn-default-background: $second-color;
-$btn-default-color: $base-black;
+$btn-default-color: $base-white;
 
 // ul, li
 $ul-bullet: $main-color;
@@ -83,7 +83,7 @@ $menu-break: "md";
 $color-placeholder: #000;
 
 // inputs
-$border-color: #f1f1f1;
+$border-color: $main-color;
 $input-background: #f1f1f1;
 $focus-border-color: $main-color;
 $input-height: 50px;

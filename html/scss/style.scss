@@ -8,9 +8,16 @@
 @import "project-form.scss";
 @import "selectric.scss";
 @import "datepicker.scss";
-@import "checkbox.scss";
+//@import "checkbox.scss";
 
 @import "print.scss";
+
+%hr-line{
+  margin: 40px auto;
+  display: block;
+  height: 2px;
+  border: 0;
+}
 
 body{
   color: $second-color;
@@ -82,41 +89,41 @@ body{
   }
 }
 
-.building{
-  margin-left: 20px;
-  width: 90%;
-  div{
-    position: relative;
-    .picture{
-      width: 100%;
-    }
-    .badg{
-      padding: 15px;
+.building-item{
+  position: relative;
+  @include transition;
+  &-image{
+    padding: 0;
+    &-label{
+      color: $base-white;
+      text-transform: uppercase;
+      padding: 1.5rem;
       position: absolute;
       top: 0;
       left: 0;
       background-color: $second-color;
-      z-index: 600;
+      z-index: 50;
+    }
+    img{
+      width: 100%;
     }
   }
-  a{
+  .building-item-content{
     position: relative;
-    display: block;
-    @include transition;
-    span{
-      padding: 1.5rem 2rem;
-      height: 7.5rem;
-      @include media(md){
-        height: 5.5rem;
-      }
-      &.button{
-        color: $base-white;
-        background-color: $main-color;
-      }
+    height: 7.5rem;
+    @include media(md){
+      height: 5.5rem;
     }
-    &:hover{
-      color: $base-white!important;
-      @include transition(500ms);
+    &-price{
+      padding: 1.5rem 2rem;
+      float: right;
+      color: $base-white;
+      background-color: $main-color;
+    }
+    &-more{
+      padding: 1.5rem 2rem;
+      text-decoration: underline;
+      float: left;
     }
     &:after {
       content: "";
@@ -124,17 +131,21 @@ body{
       position: absolute;
       width: 0px;
       height: 7.5rem;
-      bottom: -7.5rem;
+      bottom: 1rem;
       right: 0;
       background-color: $main-color;
       @include transition(600ms);
       @include media(md){
         height: 5.5rem;
-        bottom: -5.5rem;
+        bottom: 0.2rem;
       }
     }
-    &:hover:after,
-    &:focus:after {
+  }
+  &:hover,
+  &:focus{
+    color: $base-white!important;
+    @include transition(500ms);
+    .building-item-content:after{
       color: $base-white;
       width: 100%;
     }
@@ -147,6 +158,10 @@ body{
 
 .second-color-bgr{
   background-color: $second-color;
+}
+
+.light-blue-bgr{
+  background-color: #D5E8FB;
 }
 
 .orange{
@@ -173,12 +188,8 @@ body{
   }
 }
 
-#header{
-  width: 85%;
-  margin: auto;
-}
-
-#head-logo{
+.header-logo{
+  cursor: pointer;
   &:hover,
   &:focus{
     max-width: 73px;
@@ -186,26 +197,26 @@ body{
   }
 }
 
-#Logo{
+.logo-main{
   z-index: 9;
   img{
-    margin-top:20rem;
+    margin-top:55rem;
     margin-bottom:-3.5rem;
     z-index:9;
     position:relative;
   }
 }
 
-#jacket{
+.jacket-container{
   //padding-bottom: 64px;
   img{
     z-index:-1;
   }
   div{
     margin-top: -40rem;
-    margin-bottom:35rem;
-    #move{
-      margin-top:20rem;
+    //margin-bottom:35rem;
+    .btn-move{
+      margin-top:30rem;
       a{
         position:relative;
         right:1rem;
@@ -218,17 +229,40 @@ body{
     }
   }
   #deal{
-    padding-top: 15rem;
-    padding-bottom: 64px;
+    margin-top: 20rem;
+    padding-top: 10rem;
+    padding-bottom: 60px;
+    color: $base-white;
+    h3{
+      color: $second-color;
+    }
+    hr:first-of-type{
+      @extend %hr-line;
+      border-top: 2px solid $second-color;
+    }
   }
 }
 
-#team{
+.cooperation-container{
+  h3{
+    color: $main-color;
+  }
+  hr{
+    @extend %hr-line;
+    border-top: 2px solid $main-color;
+  }
+}
+
+.team-container{
+  hr{
+    @extend %hr-line;
+    border-top: 2px solid $second-color;
+  }
   .row{
     div{
-      div{
+      .person-item{
         padding: 0.5rem;
-        div{
+        .person-item-image{
           position: relative;
           .portrait{
             //padding: 0.01rem;
@@ -236,23 +270,32 @@ body{
           }
           .tie{
             opacity: 0;
-            margin-top: -6rem;
+            margin-top: -4.5rem;
             @include transform(scale(0.3));
             @include transition(500ms);
             @include media(md){
-              margin-top: -5rem;
+              margin-top: -3rem;
             }
           }
         }
-        .name{
-          h4,
-          p{
-            font-weight: bold!important;
+        .naperson-item-content{
+          font-weight: bold!important;
+          .naperson-item-content-email{
+            a{
+              text-decoration: none;
+              color: $second-color;
+            }
           }
         }
         &:hover{
           color: $base-white;
-          div.image{
+          .naperson-item-content-email{
+            a{
+              text-decoration: none;
+              color: $base-white;
+            }
+          }
+          .person-item-image{
             .tie{
               @include opacity(1);
               @include transform(scale(1));
@@ -264,22 +307,34 @@ body{
   }
 }
 
-#numbers{
-  .row{
-    div{
-      h1{
-        font-size: 10rem;
-      }
-      h4{
-        font-weight: bold;
-      }
-      &.framed{
-        @include media(md){
-          border-left:2px solid $second-color;
-          border-right:2px solid $second-color;
-        }
-      }
+.number-item{
+  h1{
+    font-size: 10rem;
+    color: $main-color!important;
+  }
+  h4{
+    font-weight: bold;
+  }
+  &.framed{
+    @include media(md){
+      border-left:2px solid $second-color;
+      border-right:2px solid $second-color;
     }
+  }
+}
+
+.career-container{
+  hr{
+    @extend %hr-line;
+    margin-left: 0;
+    border-top: 2px solid $second-color;
+  }
+}
+
+.offering-container{
+  hr{
+    @extend %hr-line;
+    border-top: 2px solid $second-color;
   }
 }
 
@@ -293,22 +348,15 @@ body{
 }
 
 hr{
-  margin: 40px auto;
+  margin: 3rem auto;
   width: 200px;
   border: none;
-  height: 2px;
-  &.orange{
-    background-color: $main-color;
-  }
-  &.blue{
-    background-color:$second-color;
-  }
 }
 
 h4{
   font-size: 2rem;
 }
-
+/*
 form{
   .row{
     input,
@@ -341,4 +389,4 @@ form{
       }
     }
   }
-}
+}*/

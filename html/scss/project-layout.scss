@@ -66,6 +66,10 @@
 
 header{
   background: $second-color;
+  position:fixed;
+  width: 100%;
+  top:0;
+  z-index: 444;
   .header{
     margin: auto;
     transition: 0.6s;
@@ -81,7 +85,8 @@ header{
           display:none;
         }
         img{
-          height: 5rem !important;
+          max-width: 73px;
+          //height: 5rem !important;
         }
       }
     }
@@ -93,6 +98,7 @@ header{
       left:0;
       background: $second-color;
       width: 100%;
+      text-transform: uppercase;
       @include calc("max-height", "100vh - 5rem");
       @include media($menu-break){
         display:block;
@@ -225,6 +231,8 @@ header{
       }
     }
     &-hamburger{
+      cursor: pointer;
+      z-index: 333;
       @include media(md){
         display: none;
       }
@@ -311,16 +319,4 @@ footer{
     @include media(xxl){
         display:block;
     }
-}
-
-.padding-32{
-  padding: 32px 0;
-}
-
-.padding-64{
-  padding: 64px 0;
-}
-
-.padding-128{
-  padding: 128px 0;
 }
