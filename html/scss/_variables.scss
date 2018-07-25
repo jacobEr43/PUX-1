@@ -80,11 +80,11 @@ $hamburger-width: 6rem;
 $menu-break: "md";
 
 // form
-$color-placeholder: #000;
+$color-placeholder: #87929d;
 
 // inputs
 $border-color: $main-color;
-$input-background: #f1f1f1;
+$input-background: #f8c6b6;
 $focus-border-color: $main-color;
 $input-height: 50px;
 $textarea-height: $input-height * 3;
@@ -118,8 +118,8 @@ $radio-active-border: $main-color;
 $radio-after-background: $main-color;
 
 // form checkbox
-$checkbox-background: #eeeff4;
-$checkbox-border: #eeeff4;
+$checkbox-background: #f8c6b6;
+$checkbox-border: $main-color;
 $checkbox-active-border: $main-color;
 $checkbox-after-background: $main-color;
 

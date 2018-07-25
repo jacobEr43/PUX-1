@@ -88,6 +88,7 @@ body{
 
 body{
 	 @include pux-scale-with-min("font-size", 16px, 14px);
+   color: $second-color;
 }
 
 img{
@@ -169,11 +170,15 @@ a{
 }
 
 .btn{
+  font-size: 2.25rem;
   display: inline-block;
   @include border-radius(0);
   border: none;
   padding:1rem 1.5rem;
   @include box-shadow(none);
+  @include media(md){
+    font-size: 1.5rem;
+  }
   &:focus,
   &:hover{
       text-decoration: none;
@@ -186,7 +191,14 @@ a{
   @include border-radius(5rem);
   border: none;
   padding:1rem 3rem;
+  vertical-align: middle;
   @include box-shadow(none);
+  &:after{
+    content:"\e927";
+    display: inline-block;
+    vertical-align: middle;
+    margin:0 0 0 1rem;
+   }
   &:focus,
   &:hover{
       text-decoration: none;
@@ -213,7 +225,7 @@ a{
   &:focus,
   &:hover{
       text-decoration: none;
-      background: darken($btn-default-background, 5);
+      background: lighten($btn-default-background, 5);
       color: $btn-default-color;
   }
   &.btn-orange{
@@ -230,6 +242,7 @@ a{
   background-color: $btn-primary-background;
   color: $base-white;
   border: 1px solid $base-white;
+  @include transition;
   &:focus,
   &:hover{
       text-decoration: none;
@@ -242,6 +255,7 @@ a{
   background-color: $btn-primary-background;
   color: $btn-primary-color;
   border: 1px solid $btn-primary-color;
+  @include transition;
   &:focus,
   &:hover{
       text-decoration: none;

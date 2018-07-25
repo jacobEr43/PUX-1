@@ -4,7 +4,7 @@ $(function() {
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
         if (scroll >= 10) {
-          obsah.style = "background-color: #10263C; opacity: 0.85; transition: 0.5s; padding-top: 10px; padding-bottom:10px;";
+          obsah.style = "background-color: #10263C; transition: 0.5s; padding-top: 10px; padding-bottom:10px;";
         } else {
           obsah.style = "background: transparent; transition: 0.5s; padding-top: 30px; padding-bottom:30px;";
         }

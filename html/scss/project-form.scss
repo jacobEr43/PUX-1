@@ -14,7 +14,8 @@ label{
 .form-control,
 textarea,
 input[type="text"],
-input[type="password"]{
+input[type="password"],
+input[type="email"]{
   width:100%;
   @include pux-scale-with-min("height", $input-height, 40px);
   padding: 0 1.5rem;
@@ -28,12 +29,13 @@ input[type="password"]{
   &:focus{
     outline: 0;
     border: 1px solid $focus-border-color;
+    background: $input-background;
   }
 }
 
 textarea{
   @include pux-scale-with-min("height", $textarea-height, 100px);
-  padding: 1.5rem
+  padding: 1.5rem;
     &:focus{
       border: 1px solid $focus-border-color;
     }
@@ -152,7 +154,7 @@ label{
                 @include border-radius(50%);
                 width:16px;
                 height:16px;
-                background:$radio-background;
+                background:$input-background;
                 display:block;
                 position:absolute;
                 left:0;
@@ -163,12 +165,12 @@ label{
             &:after{
                 content:"";
                 display:block;
-                left:5px;
+                left: 3px;
                 top:8px;
                 width:6px;
                 height:6px;
-                background:$radio-after-background;
-                @include border-radius(50%);
+                background:$input-background;
+                //@include border-radius(50%);
                 position:absolute;
                 @include opacity(0);
                 @include transition;
@@ -191,10 +193,16 @@ label{
     input[type="checkbox"]{
         display:none;
         & +label{
+            color: $base-white;
+            font-size: 1.75rem;
             position:relative;
             padding:0 0 10px 25px;
             margin:0;
             display: inline-block;
+            text-transform: uppercase;
+            @include media(md){
+              font-size: 1.25rem;
+            }
             &:before{
                 content:"";
                 width:16px;
@@ -208,16 +216,20 @@ label{
                 @include transition;
             }
             &:after{
-                content:"S";
+                content:"+";
+                font-size: 16px;
+                font-weight: bold;
+                color: $second-color;
                 display:block;
-                left:5px;
-                top:8px;
+                left:9px;
+                top:3px;
                 width:6px;
                 height:6px;
-                background:$checkbox-after-background;
+                //background:$checkbox-after-background;
                 position:absolute;
                 @include opacity(0);
                 @include transition;
+                @include rotate;
             }
         }
         &:checked{

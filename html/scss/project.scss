@@ -1,0 +1,48 @@
+@import "_mixins/pux/breakpoints.scss";
+@import "_mixins/pux/css-rules.scss";
+@import "_variables.scss";
+
+.main-color-bgr{
+  background-color: $main-color;
+}
+
+.second-color-bgr{
+  background-color: $second-color;
+}
+
+.light-blue-bgr{
+  background-color: #D5E8FB;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.animate-fade{
+  animation: animatefade 5s;
+}
+
+@keyframes animatefade {
+  from {
+    @include opacity(0);
+  } to {
+    @include opacity(1);
+  }
+}
+
+.residence{
+  width:100%;
+}
+
+hr{
+  margin: 3rem auto;
+  width: 200px;
+  border: none;
+}
+
+h4{
+  font-size: 2.5rem;
+  @include media(md){
+    font-size: 2rem;
+  }
+}
