@@ -1,0 +1,61 @@
+@import "_mixins/pux/breakpoints.scss";
+@import "_mixins/pux/css-rules.scss";
+@import "_mixins/pux/scale.scss";
+@import "_variables.scss";
+
+.person-item{
+  padding: 3rem;
+  color: $second-color!important;
+  &-image{
+    position: relative;
+    padding-right: 5rem;
+    float: left;
+    .portrait{
+      @include border-radius(1000px);
+    }
+    &:after{
+      content: "";
+    }
+  }
+  .naperson-item-content{
+    margin-left: 5rem;
+    font-weight: normal!important;
+    &-name{
+      font-size: 3rem;
+    }
+    &-specialization{
+      &-title{
+        color: $main-color!important;
+      }
+    }
+    &-motto{
+      &:before{
+        content: '"';
+      }
+      &:after{
+        content: '"';
+      }
+    }
+    &-email{
+      a{
+        text-decoration: none;
+        color: $second-color!important;
+      }
+    }
+  }
+}
+
+.btn-orange{
+  background-color: $main-color;
+  color: $base-white;
+  &:hover{
+    background-color: $base-white;
+    color: $main-color;
+  }
+}
+
+.team-container{
+  h3{
+    color: $main-color
+  }
+}
