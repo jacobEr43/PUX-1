@@ -3,12 +3,18 @@
 @import "_mixins/pux/scale.scss";
 @import "_variables.scss";
 
+main{
+  margin-top:15rem;
+}
+
 .person-item{
   padding: 3rem;
   color: $second-color!important;
   &-image{
+    width: 33%;
+    padding: 1rem 5rem 20rem 0;
     position: relative;
-    padding-right: 5rem;
+    //padding-right: 5rem;
     float: left;
     .portrait{
       @include border-radius(1000px);
@@ -40,7 +46,28 @@
       a{
         text-decoration: none;
         color: $second-color!important;
+        span{
+          vertical-align: middle;
+          font-size: 3rem;
+          @include media(md){
+            font-size: 2rem;
+          }
+        }
       }
+    }
+    &-phone{
+      span{
+        position: relative;
+        top: 0.2rem;
+        font-size: 3rem;
+        @include media(md){
+          font-size: 2rem;
+        }
+      }
+    }
+    &-id{
+      position: relative;
+      left: 3rem;
     }
   }
 }
@@ -56,6 +83,6 @@
 
 .team-container{
   h3{
-    color: $main-color
+    color: $main-color;
   }
 }

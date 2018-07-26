@@ -322,6 +322,9 @@ footer{
       text-transform: uppercase;
     }
   }
+  .map{
+    height: 40rem;
+  }
 }
 
 .is-xxl{
@@ -512,19 +515,17 @@ footer{
             //padding: 0.01rem;
             @include border-radius(1000px);
           }
-          &:after{
-            content: url('../images/motylek_blue.png');
-            //width: 129px;
-            //height: 52px;
-            display: block;
-            position: relative;
-            top: -4.5rem;
-            @include opacity(0);
-            @include transform(scale(0.3));
-            @include transition(500ms);
-            @include media(md){
-              top: -3rem;
-            }
+        }
+        .tie:after{
+          content: url('../images/motylek_blue.png');
+          display: block;
+          position: relative;
+          top: -4.5rem;
+          @include opacity(0);
+          @include transform(scale(0.3));
+          @include transition(500ms);
+          @include media(md){
+            top: -3rem;
           }
         }
         .naperson-item-content{
@@ -544,11 +545,9 @@ footer{
               color: $base-white;
             }
           }
-          .person-item-image{
-            &:after{
-              @include opacity(1);
-              @include transform(scale(1));
-            }
+          .tie:after{
+            @include opacity(1);
+            @include transform(scale(1));
           }
         }
       }

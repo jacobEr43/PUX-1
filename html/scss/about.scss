@@ -1,0 +1,29 @@
+@import "_mixins/pux/breakpoints.scss";
+@import "_mixins/pux/css-rules.scss";
+@import "_mixins/pux/scale.scss";
+@import "_variables.scss";
+
+main{
+  margin-top:15rem;
+}
+
+.cooperation-container{
+  hr{
+    border-top: 2px solid $second-color;
+  }
+}
+
+.steps-list{
+  font-weight: bold;
+  @include media(md){
+    margin: auto;
+    width: 75%;
+  }
+  h3{
+    text-align: center;
+    color: $main-color;
+  }
+  hr{
+    padding: 5px;
+  }
+}

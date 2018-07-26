@@ -1,0 +1,72 @@
+@import "_mixins/pux/breakpoints.scss";
+@import "_mixins/pux/css-rules.scss";
+@import "_mixins/pux/scale.scss";
+@import "_variables.scss";
+
+.building-detail{
+  &-head{
+    &-title{
+      font-weight: bold;
+      font-size: 5rem;
+      float: left;
+      &-number{
+        font-size: 2rem;
+        font-weight: normal;
+      }
+    }
+    &-price{
+      float: right;
+      padding: 1.5rem;
+      color: $base-white;
+      background-color: $main-color;
+      text-align: center;
+      &-number{
+        font-weight: bold;
+        font-size: 3rem;
+      }
+    }
+  }
+  &-content{
+    clear: both;
+    &-description{
+      &-title{
+        color: $main-color;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-bottom: 1px solid $second-color;
+      }
+      &-parameters{
+        &-parameter{
+          text-align: center;
+          &-value{
+            font-weight: bold;
+            font-size: 2rem;
+          }
+        }
+      }
+      &-details{
+        &-energy{
+          border-top: 1px solid $second-color;
+          border-bottom: 1px solid $second-color;
+        }
+      }
+    }
+    &-about{
+      &-image{
+        position: relative;
+        img{
+          width: 100%;
+        }
+        &-label{
+          position: absolute;
+          bottom: 3rem;
+          right: 0;
+          background-color: $main-color;
+          color: $base-white;
+          padding: 2rem;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

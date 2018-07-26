@@ -68,8 +68,8 @@ $btn-default-background: $second-color;
 $btn-default-color: $base-white;
 
 // ul, li
-$ul-bullet: $main-color;
-$ol-number: $main-color;
+$ul-bullet: $second-color;
+$ol-number: $second-color;
 
 // table
 $table-even-background: #f8f8f8;
@@ -80,12 +80,12 @@ $hamburger-width: 6rem;
 $menu-break: "md";
 
 // form
-$color-placeholder: #87929d;
+$color-placeholder: #9ea5ab;
 
 // inputs
-$border-color: $main-color;
-$input-background: #f8c6b6;
-$focus-border-color: $main-color;
+$border-color: #d7e8fc;
+$input-background: #f3f8fe;
+$focus-border-color: #d7e8fc;
 $input-height: 50px;
 $textarea-height: $input-height * 3;
 
@@ -118,9 +118,9 @@ $radio-active-border: $main-color;
 $radio-after-background: $main-color;
 
 // form checkbox
-$checkbox-background: #f8c6b6;
-$checkbox-border: $main-color;
-$checkbox-active-border: $main-color;
+$checkbox-background: #f3f8fe;
+$checkbox-border: #d7e8fc;
+$checkbox-active-border: #d7e8fc;
 $checkbox-after-background: $main-color;
 
 // form error

@@ -41,7 +41,6 @@ textarea{
     }
 }
 
-
 input[type="submit"]{
   cursor: pointer;
   &:focus,
@@ -193,7 +192,6 @@ label{
     input[type="checkbox"]{
         display:none;
         & +label{
-            color: $base-white;
             font-size: 1.75rem;
             position:relative;
             padding:0 0 10px 25px;

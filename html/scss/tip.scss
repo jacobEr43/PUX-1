@@ -1,0 +1,24 @@
+@import "_mixins/pux/breakpoints.scss";
+@import "_mixins/pux/css-rules.scss";
+@import "_mixins/pux/scale.scss";
+@import "_variables.scss";
+
+.tip-container{
+  h3{
+    color: $main-color;
+  }
+  hr{
+    border-top: 2px solid $second-color;
+  }
+}
+
+.ico-item{
+  @include media(md){
+    width: 50%;
+    margin: auto;
+  }
+}
+
+.bottom-border{
+  border-bottom: 2px solid #d7e8fa;
+}
