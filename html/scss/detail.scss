@@ -12,6 +12,13 @@
       &-number{
         font-size: 2rem;
         font-weight: normal;
+        dl{
+          dt{
+            float:left;
+            font-weight: normal;
+            padding-right: 1rem;
+          }
+        }
       }
     }
     &-price{
@@ -22,7 +29,10 @@
       text-align: center;
       &-number{
         font-weight: bold;
-        font-size: 3rem;
+        font-size: 3.5rem;
+      }
+      &-label{
+        font-size: 1.5rem;
       }
     }
   }
@@ -33,27 +43,88 @@
         color: $main-color;
         text-transform: uppercase;
         font-weight: bold;
-        border-bottom: 1px solid $second-color;
+        border-bottom: 1px solid #d7e8fa;
       }
       &-parameters{
         &-parameter{
           text-align: center;
           &-value{
             font-weight: bold;
-            font-size: 2rem;
+            font-size: 3rem;
+            @include media(md){
+              font-size: 2rem;
+            }
           }
         }
       }
       &-details{
+        dl{
+          dt{
+            font-weight: normal;
+          }
+          dd{
+            font-weight: bold;
+            a{
+              vertical-align: middle;
+              padding-left: 5px;
+              font-size: 20px;
+            }
+          }
+        }
         &-energy{
-          border-top: 1px solid $second-color;
-          border-bottom: 1px solid $second-color;
+          vertical-align: middle;
+          border-top: 1px solid #d7e8fa;
+          border-bottom: 1px solid #d7e8fa;
+          dl{
+            dt{
+              padding-top: 5px;
+            }
+          }
+          .energy{
+            display: inline-block;
+            width: 30px;
+            height: 12px;
+            //padding: .125px 20px;
+            background-color: green;
+            position: relative;
+            &:after{
+              content: "";
+              display: block;
+              position: absolute;
+              top:1.78px;
+              right: -4.2px;
+              background-color: green;
+              z-index: 100;
+              width: 8.485px;
+              height: 8.485px;
+              @include rotate(45deg);
+            }
+          }
+        }
+        &-others{
+          dl{
+            dt{
+              &:after{
+                content: ":";
+              }
+            }
+          }
         }
       }
     }
     &-about{
       &-image{
         position: relative;
+        a{
+          display: block;
+          color: $base-white;
+          text-decoration: none;
+          &:hover,
+          &:focus{
+            color: $base-white;
+            text-decoration: none;
+          }
+        }
         img{
           width: 100%;
         }
@@ -62,11 +133,44 @@
           bottom: 3rem;
           right: 0;
           background-color: $main-color;
-          color: $base-white;
           padding: 2rem;
           font-size: 2rem;
         }
       }
     }
+  }
+}
+
+
+.breadcrumb-navigation{
+  ul{
+    padding-left: 0;
+    margin-left: 0;
+    li {
+      display: inline;
+      font-weight: bold;
+      &:before{
+        background: none;
+      }
+
+    }
+      li+li:before {
+        padding: 0 8px;
+        content: "|";
+        top: -2px;
+        left: -3px;
+
+      }
+      a{
+        color: $second-color;
+        font-weight: normal;
+        text-decoration: none;
+        &:hover,
+        &:focus{
+          color: $second-color;
+          text-decoration: none;
+        }
+      }
+
   }
 }

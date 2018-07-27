@@ -309,7 +309,7 @@ main{
                 left:-4rem;
                 top:-5px;
                 font-weight:bold;
-                border: 1px solid $main-color;
+                border: 1.5px solid $main-color;
                 @include border-radius(100rem);
                 @include media(md){
                   left:-3rem;

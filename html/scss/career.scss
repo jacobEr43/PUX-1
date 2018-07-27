@@ -50,10 +50,36 @@ main{
 
 .recaptcha-box{
   height: 100%;
+  width: 100%;
   margin-left: 2rem!important;
   vertical-align: middle;
-  margin-right: 0;
+  //margin-right: 0;
   padding: 1.25rem;
   border: 1px solid #d7e8fc;
   background-color: #f5f5f5;
+}
+
+.wanted{
+  position: relative;
+  img{
+    z-index: -1;
+    @include media(md){
+      @include transform(scale(0.4));
+      position:absolute;
+      bottom: -35rem;
+      right: 5%;
+    }
+    @include media(lg){
+      bottom: -40rem;
+    }
+    @include media(xl){
+      bottom: -40rem;
+    }
+    @include media(xxl){
+      bottom: -40rem;
+    }
+    @include media(xxxl){
+      bottom: -45rem;
+    }
+  }
 }

@@ -1,0 +1,45 @@
+@import "_mixins/pux/breakpoints.scss";
+@import "_mixins/pux/css-rules.scss";
+@import "_mixins/pux/scale.scss";
+@import "_variables.scss";
+
+main{
+  margin-top:15rem;
+}
+
+.offering-container{
+  h3{
+    color: $main-color;
+  }
+}
+
+.nav-tabs{
+  li{
+    padding: 1rem 3rem;
+    margin: 0 4rem 0 0;
+    border: 1px solid #d7e8fa;
+    border-bottom: 0;
+    text-transform: uppercase;
+    color: $second-color;
+    font-weight: bold;
+    @include media(md){
+      font-size: 1.1rem;
+    }
+    &:before{
+      background: none;
+    }
+    &.active{
+      background-color: #d7e8fa;
+    }
+  }
+}
+
+.btn-orange{
+  background-color: $main-color;
+  color: $base-white;
+  &:hover,
+  &:focus{
+    background-color: $base-white;
+    color: $main-color;
+  }
+}

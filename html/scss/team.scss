@@ -35,6 +35,7 @@ main{
       }
     }
     &-motto{
+      font-style: italic;
       &:before{
         content: '"';
       }
@@ -75,7 +76,8 @@ main{
 .btn-orange{
   background-color: $main-color;
   color: $base-white;
-  &:hover{
+  &:hover,
+  &:focus{
     background-color: $base-white;
     color: $main-color;
   }

@@ -46,3 +46,18 @@ h4{
     font-size: 2rem;
   }
 }
+
+.ref{
+  padding-top: 10px;
+  text-transform: uppercase;
+  color: $base-white;
+  a{
+    text-decoration: none;
+    color: $base-white;
+    &:hover,
+    &:focus{
+      text-decoration: none;
+      color: $base-white;
+    }
+  }
+}

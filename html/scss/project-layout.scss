@@ -321,6 +321,15 @@ footer{
     h4{
       text-transform: uppercase;
     }
+    .mail{
+      font-size: 16px;
+      text-decoration: none;
+      color: $base-white;
+      &:hover{
+        text-decoration: none;
+        color: $base-white;
+      }
+    }
   }
   .map{
     height: 40rem;
