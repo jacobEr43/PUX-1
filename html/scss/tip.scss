@@ -26,38 +26,60 @@
 
 .money{
   margin: auto;
-  width: 75%;
+  width: 100%;
   position: relative;
-  top: 10rem;
+  top: 3rem;
+  @include media(md){
+    width: 75%;
+  }
   &-bill-1{
     position: absolute;
     top: 0;
-    left: 0;
-    @include transform(scale(0.8) rotate(105deg));
+    left: 5%;
+    @include transform(scale(0.4) rotate(105deg));
+    @include media(md){
+      @include transform(scale(0.8) rotate(105deg));
+    }
   }
   &-bill-2{
     position: absolute;
     top: 15rem;
-    left: 20rem;
+    left: 20%;
     z-index: -1;
+    @include transform(scale(0.5));
+    @include media(md){
+      @include transform(scale(1));
+    }
   }
   &-bill-3{
     position: absolute;
     top: 12rem;
-    left: 50rem;
-    @include transform(scale(1.3) rotate(120deg));
+    left: 40%;
+    @include transform(scale(0.65) rotate(120deg));
+    @include media(md){
+      @include transform(scale(1.3) rotate(120deg));
+    }
+    //@include transform(scale(1.3) rotate(120deg));
   }
   &-bill-4{
     position: absolute;
     top: 10rem;
-    left: 75rem;;
+    left: 60%;
     @include transform(rotate(35deg));
     z-index: -1;
+    @include transform(scale(0.5));
+    @include media(md){
+      @include transform(scale(1));
+    }
   }
   &-bill-5{
     position: absolute;
     top: 5rem;
-    left: 95rem;
+    left: 80%;
+    @include transform(scale(0.4) rotate(75deg));
+    @include media(md){
+      @include transform(scale(0.8) rotate(75deg));
+    }
     @include transform(scale(0.8) rotate(75deg));
   }
 }

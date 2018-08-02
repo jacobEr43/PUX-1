@@ -8,23 +8,30 @@ main{
 }
 
 .person-item{
-  padding: 3rem;
+  //background-color: blue;
+  display: flex;
+  margin-bottom: 3rem;
+  padding-top: 5rem;
+  padding-right: 3rem;
+  align-items: flex-start;
   color: $second-color!important;
   &-image{
-    width: 33%;
-    padding: 1rem 5rem 20rem 0;
+    padding: 1rem 2rem 0 0;
     position: relative;
-    //padding-right: 5rem;
-    float: left;
+    width: 45%;
+    @include media(md){
+      width: 45%;
+      padding: 1rem 2rem 0 0;
+    }
     .portrait{
       @include border-radius(1000px);
-    }
-    &:after{
-      content: "";
+      margin: auto;
+      //width: 100%;
     }
   }
   .naperson-item-content{
-    margin-left: 5rem;
+    flex: 1;
+    //margin-left: 5rem;
     font-weight: normal!important;
     &-name{
       font-size: 3rem;
@@ -49,9 +56,9 @@ main{
         color: $second-color!important;
         span{
           vertical-align: middle;
-          font-size: 3rem;
+          font-size: 4rem;
           @include media(md){
-            font-size: 2rem;
+            font-size: 3rem;
           }
         }
       }
@@ -59,16 +66,23 @@ main{
     &-phone{
       span{
         position: relative;
-        top: 0.2rem;
-        font-size: 3rem;
+        top: 0.5rem;
+        font-size: 4rem;
         @include media(md){
-          font-size: 2rem;
+          font-size: 3rem;
         }
       }
     }
     &-id{
       position: relative;
-      left: 3rem;
+      top: -1rem;
+      span{
+        @include opacity(0);
+        font-size: 4rem;
+        @include media(md){
+          font-size: 3rem;
+        }
+      }
     }
   }
 }

@@ -5,7 +5,7 @@
 @import "_variables.scss";
 
 %hr-line{
-  margin: 40px auto;
+  margin: 20px auto;
   display: block;
   height: 2px;
   border: 0;
@@ -322,7 +322,6 @@ footer{
       text-transform: uppercase;
     }
     .mail{
-      font-size: 16px;
       text-decoration: none;
       color: $base-white;
       &:hover{
@@ -344,16 +343,26 @@ footer{
 }
 
 .ico-item{
+  padding: 0 10rem;
+  display: flex;
+  align-items: flex-start;
+  @include media(md){
+    padding: 0 2rem;
+  }
+  @include media(lg){
+    padding: 0 10rem;
+  }
   &-image{
-    padding-right: 30px;
-    padding-bottom: 30px;
+    margin-right: 3rem;
+    //padding-bottom: 35px;
     font-size: 5rem;
-    float: left;
+    //float: left;
   }
   &-content{
+    flex:1;
     &-name{
       padding-bottom: 1rem;
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-weight: bold;
       @include media(md){
         font-size: 2rem;
@@ -371,7 +380,7 @@ footer{
     &-label{
       color: $base-white;
       text-transform: uppercase;
-      padding: 1.5rem;
+      padding: 1rem;
       position: absolute;
       top: 0;
       left: 0;
@@ -386,6 +395,9 @@ footer{
     position: relative;
     height: 7.5rem;
     @include media(md){
+      height: 6.5rem;
+    }
+    @include media(lg){
       height: 5.5rem;
     }
     &-price{
@@ -395,9 +407,11 @@ footer{
       background-color: $main-color;
     }
     &-more{
-      padding: 1.5rem 2rem;
+      padding: 1.5rem 1rem;
+      color: $base-black;
       text-decoration: underline;
       float: left;
+      @include transition(500ms);
     }
     &:after {
       content: "";
@@ -405,11 +419,15 @@ footer{
       position: absolute;
       width: 0px;
       height: 7.75rem;
-      bottom: 1rem;
+      bottom: 1.025rem;
       right: 0;
       background-color: $main-color;
       @include transition(600ms);
       @include media(md){
+        height: 6.5rem;
+        bottom: 0.725rem;
+      }
+      @include media(lg){
         height: 5.5rem;
         bottom: 0.1rem;
       }
@@ -417,7 +435,9 @@ footer{
   }
   &:hover,
   &:focus{
-    color: $base-white!important;
+    .building-item-content-more{
+      color: $base-white!important;
+    }
     @include transition(500ms);
     .building-item-content:after{
       color: $base-white;
@@ -481,7 +501,7 @@ footer{
     }
   }
   #deal{
-    margin-top: 20rem;
+    margin-top: 5rem;
     padding-top: 10rem;
     padding-bottom: 60px;
     color: $base-white;
@@ -517,12 +537,18 @@ footer{
   .row{
     div{
       .person-item{
-        padding: 0.5rem;
         &-image{
           position: relative;
           .portrait{
-            //padding: 0.01rem;
             @include border-radius(1000px);
+            width: 50%;
+            margin: auto;
+            @include media(md){
+              width: 100%;
+            }
+            @include media(lg){
+              width: 70%;
+            }
           }
         }
         .tie:after{
@@ -539,10 +565,25 @@ footer{
         }
         .naperson-item-content{
           font-weight: bold!important;
+          font-size: 3rem;
+          margin-top: -25px;
+          @include media(md){
+            font-size: 2rem;
+          }
+          @include media(lg){
+            font-size: 2rem;
+          }
           .naperson-item-content-email{
             a{
+              font-size: 2rem;
               text-decoration: none;
               color: $second-color;
+              @include media(md){
+                font-size: 1.2rem;
+              }
+              @include media(lg){
+                font-size: 1.5rem;
+              }
             }
           }
         }
@@ -563,6 +604,9 @@ footer{
     }
   }
 }
+.number-container{
+  padding: 0 15rem;
+}
 
 .number-item{
   h1{
@@ -581,6 +625,15 @@ footer{
 }
 
 .career-container{
+  @include media(lg){
+    padding: 0 15rem;
+  }
+  .content{
+    padding-top: 1rem;
+    @include media(md){
+      font-size: 1.35rem;
+    }
+  }
   img{
     width: 80%;
     display: block;
@@ -595,7 +648,11 @@ footer{
     border-top: 2px solid $second-color;
   }
   h4{
+    padding-top: 1rem;
     font-weight: bold;
+    @include media(md){
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -613,7 +670,7 @@ footer{
   .text-colum{
     padding-left:30px;
   }
-  a{
-    font-size: 2.5rem;
+  span{
+    font-size: 3rem;
   }
 }

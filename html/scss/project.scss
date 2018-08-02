@@ -14,10 +14,6 @@
   background-color: #D5E8FB;
 }
 
-.uppercase{
-  text-transform: uppercase;
-}
-
 .animate-fade{
   animation: animatefade 5s;
 }
@@ -31,12 +27,14 @@
 }
 
 .residence{
-  width:100%;
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
 }
 
 hr{
   margin: 3rem auto;
-  width: 200px;
+  width: 14rem;
   border: none;
 }
 

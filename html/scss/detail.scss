@@ -84,7 +84,7 @@
             display: inline-block;
             width: 30px;
             height: 12px;
-            //padding: .125px 20px;
+            margin: 0 1rem;
             background-color: green;
             position: relative;
             &:after{
@@ -130,11 +130,33 @@
         }
         &-label{
           position: absolute;
-          bottom: 3rem;
+          bottom: 0rem;
           right: 0;
           background-color: $main-color;
           padding: 2rem;
           font-size: 2rem;
+          @include media(xxs){
+            bottom: 4rem;
+          }
+          @include media(xs){
+            bottom: 3.6rem;
+          }
+          @include media(sm){
+            bottom: 3.3rem;
+          }
+          @include media(md){
+            bottom: 3rem;
+          }
+        }
+      }
+      &-description{
+        &-icons{
+          a{
+            span{
+              padding-left: 2rem;
+              font-size: 3rem;
+            }
+          }
         }
       }
     }
@@ -147,19 +169,28 @@
     padding-left: 0;
     margin-left: 0;
     li {
+      padding-left: 0;
+      padding-right: 2rem;
       display: inline;
       font-weight: bold;
       &:before{
+        left:0;
+        width: 0;
         background: none;
       }
 
     }
       li+li:before {
-        padding: 0 8px;
+        padding: 0 1rem;
         content: "|";
-        top: -2px;
-        left: -3px;
-
+        top: -0px;
+        left: -2.5rem;
+        @include media(md){
+          left: -2.3rem;
+        }
+        @include media(lg){
+          top:-2px;
+        }
       }
       a{
         color: $second-color;
@@ -171,6 +202,5 @@
           text-decoration: none;
         }
       }
-
   }
 }
