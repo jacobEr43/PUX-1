@@ -8,8 +8,10 @@
     &-title{
       font-weight: bold;
       font-size: 5rem;
+      letter-spacing: 2px;
       float: left;
       &-number{
+        letter-spacing: normal;
         font-size: 2rem;
         font-weight: normal;
         dl{
@@ -163,7 +165,6 @@
   }
 }
 
-
 .breadcrumb-navigation{
   ul{
     padding-left: 0;
@@ -199,8 +200,21 @@
         &:hover,
         &:focus{
           color: $second-color;
-          text-decoration: none;
+          text-decoration: underline;
         }
       }
   }
+}
+
+.person-item{
+  box-shadow: 0!important;
+  background-color: none!important;
+}
+
+.detail-container,
+.contact-container,
+.offering-container{
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
 }

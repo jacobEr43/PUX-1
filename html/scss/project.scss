@@ -27,9 +27,10 @@
 }
 
 .residence{
-  height: 100vh;
-  width: 100%;
-  object-fit: cover;
+  background: url('../images/sidlo.png');
+  min-height: 35rem;
+  background-position: center;
+  background-size: cover;
 }
 
 hr{

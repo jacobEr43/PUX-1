@@ -18,6 +18,10 @@
     width: 50%;
     margin: auto;
   }
+  @include media(lg){
+    width: 33%;
+    margin: auto;
+  }
 }
 
 .bottom-border{

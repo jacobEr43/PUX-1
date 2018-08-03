@@ -13,17 +13,26 @@ main{
   }
 }
 
-.nav-tabs{
+.tabs{
+  margin: 0 1rem;
   li{
-    padding: 1rem 3rem;
-    margin: 0 4rem 0 0;
+    display: inline-block;
+    padding: .5rem 2rem;
+    margin: 0;
+    width: 100%;
     border: 1px solid #d7e8fa;
     border-bottom: 0;
     text-transform: uppercase;
     color: $second-color;
     font-weight: bold;
+    font-size: 2rem;
     @include media(md){
-      font-size: 1.1rem;
+      width: 15%;
+      margin: 0 4rem 0 0;
+      font-size: 1.25rem;
+    }
+    @include media(lg){
+      width: 10%;
     }
     &:before{
       background: none;
