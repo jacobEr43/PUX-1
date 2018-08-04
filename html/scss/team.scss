@@ -67,7 +67,7 @@ main{
         text-decoration: none;
         color: $second-color!important;
         @include media(xxs){
-          font-size: 2rem!important;
+          font-size: 3rem!important;
         }
         @include media(md){
           font-size: 1.5rem!important;
