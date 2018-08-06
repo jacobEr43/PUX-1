@@ -153,6 +153,7 @@
       }
       &-description{
         &-icons{
+          padding-top: 2rem;
           a{
             span{
               padding-left: 2rem;
@@ -206,15 +207,20 @@
   }
 }
 
-.person-item{
-  box-shadow: 0!important;
-  background-color: none!important;
-}
-
 .detail-container,
 .contact-container,
-.offering-container{
+.offering-container-sm{
   max-width: 1200px;
   width: 100%;
   margin: auto;
+}
+
+.offering-container-sm{
+  text-align: center;
+  h3{
+    color: $second-color;
+    &:after{
+      display: none;
+    }
+  }
 }

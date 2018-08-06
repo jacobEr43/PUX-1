@@ -3,18 +3,9 @@
 @import "_mixins/pux/scale.scss";
 @import "_variables.scss";
 
-main{
-  margin-top:15rem;
-}
-
-.offering-container{
-  h3{
-    color: $main-color;
-  }
-}
-
 .tabs{
-  margin: 0 1rem;
+  text-align: center;
+  margin: 5rem 1rem 0;
   li{
     display: inline-block;
     padding: .5rem 2rem;
@@ -40,15 +31,5 @@ main{
     &.active{
       background-color: #d7e8fa;
     }
-  }
-}
-
-.btn-orange{
-  background-color: $main-color;
-  color: $base-white;
-  &:hover,
-  &:focus{
-    background-color: $base-white;
-    color: $main-color;
   }
 }

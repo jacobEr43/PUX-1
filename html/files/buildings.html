@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link rel="stylesheet" href="../scss/style.min.css">
-    <link rel="stylesheet" href="../scss/buildings.min.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.4/jquery.lazy.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -15,7 +14,7 @@
   </head>
   <body>
     <header>
-      <div class="pux-container text-center">
+      <div class="pux-container">
         <div class="header">
           <div class="header-logo">
             <a href="../index.html">
@@ -29,7 +28,7 @@
               <li><a href="./career.html">Kariéra</a></li>
               <li class="Highlighted"><a href="./buildings.html">Nemovitosti</a></li>
               <li><a href="#footer">Kontakt</a></li>
-              <li><a href="./tip.html">Odměna za tip</a></li>
+              <li class="mobile-menu"><a href="./tip.html">Odměna za tip</a></li>
             </ul>
           </div>
           <a href="./tip.html" class="header-button btn btn-primary">Odměna za tip</a>
@@ -42,122 +41,152 @@
       </div>
     </header>
     <main>
+      <div class="header-helper"></div>
       <div class="pux-container">
-        <div class="offering-container text-center pt-60 pb-60">
-          <h3>Nabídka nemovitostí</h3>
-          <hr>
-          <div class="text-container pt-30 pb-60">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
-          </div>
-          <div class="tabs">
-            <ul class="nav nav-tabs">
-              <li class="active"><a href="#">Prodej</a></li>
-              <li><a href="#">Pronájem</a></li>
-              <li><a href="#">Byt</a></li>
-              <li><a href="#">Dům</a></li>
-              <li><a href="#">Pozemek</a></li>
-            </ul>
-          </div>
-          <div class="row pt-30 mx-auto">
-            <div class="col-xs-12 col-md-6 col-xl-3 p-3 mx-auto">
-              <a href="./detail.html" class="building-item">
-                <div class="building-item-image">
-                  <img src="../images/blank.png" data-src="../images/dum.png" class="lazy" alt="Nemovitost">
-                </div>
-                <div class="building-item-content">
-                  <div class="building-item-content-more">Více informací</div>
-                  <div class="building-item-content-price">8 500 000 KČ</div>
-                </div>
-              </a>
+        <div class="offering-container">
+          <div class="pt-60 pb-60">
+            <div class="text-container">
+              <h3>Nabídka nemovitostí</h3>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
             </div>
-            <div class="col-xs-12 col-md-6 col-xl-3 p-3 mx-auto">
-              <a href="./detail.html" class="building-item">
-                <div class="building-item-image">
-                  <img src="../images/blank.png" data-src="../images/dum.png" class="lazy" alt="Nemovitost">
-                  <div class="building-item-image-label">top</div>
-                </div>
-                <div class="building-item-content">
-                  <div class="building-item-content-more">Více informací</div>
-                  <div class="building-item-content-price">8 500 000 KČ</div>
-                </div>
-              </a>
+            <div class="tabs">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#">Prodej</a></li>
+                <li><a href="#">Pronájem</a></li>
+                <li><a href="#">Byt</a></li>
+                <li><a href="#">Dům</a></li>
+                <li><a href="#">Pozemek</a></li>
+              </ul>
             </div>
-            <div class="col-xs-12 col-md-6 col-xl-3 p-3 mx-auto">
-              <a href="./detail.html" class="building-item">
-                <div class="building-item-image">
-                  <img src="../images/blank.png" data-src="../images/dum.png" class="lazy" alt="Nemovitost">
-                  <div class="building-item-image-label">nízkoenergetický</div>
-                </div>
-                <div class="building-item-content">
-                  <div class="building-item-content-more">Více informací</div>
-                  <div class="building-item-content-price">8 500 000 KČ</div>
-                </div>
-              </a>
+            <div class="row pt-30 mx-auto">
+              <div class="col-xs-12 col-md-6 col-xl-3 p-3 mx-auto">
+                <a href="./detail.html" class="building-item">
+                  <div class="building-item-image">
+                    <img src="../images/blank.png" data-src="../images/dum.png" class="lazy" alt="Nemovitost">
+                  </div>
+                  <div class="building-item-content">
+                    <div class="building-item-content-more">Více informací</div>
+                    <div class="building-item-content-price">
+                      8 500 000 KČ
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-xs-12 col-md-6 col-xl-3 p-3 mx-auto">
+                <a href="./detail.html" class="building-item">
+                  <div class="building-item-image">
+                    <img src="../images/blank.png" data-src="../images/dum.png" class="lazy" alt="Nemovitost">
+                    <div class="building-item-image-label">
+                      top
+                    </div>
+                  </div>
+                  <div class="building-item-content">
+                    <div class="building-item-content-more">Více informací</div>
+                    <div class="building-item-content-price">
+                      8 500 000 KČ
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-xs-12 col-md-6 col-xl-3 p-3 mx-auto">
+                <a href="./detail.html" class="building-item">
+                  <div class="building-item-image">
+                    <img src="../images/blank.png" data-src="../images/dum.png" class="lazy" alt="Nemovitost">
+                    <div class="building-item-image-label">
+                      nízkoenergetický
+                    </div>
+                  </div>
+                  <div class="building-item-content">
+                    <div class="building-item-content-more">Více informací</div>
+                    <div class="building-item-content-price">
+                      8 500 000 KČ
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-xs-12 col-md-6 col-xl-3 p-3 mx-auto">
+                <a href="./detail.html" class="building-item">
+                  <div class="building-item-image">
+                    <img src="../images/blank.png" data-src="../images/dum.png" class="lazy" alt="Nemovitost">
+                    <div class="building-item-image-label">
+                      garáž v ceně
+                    </div>
+                  </div>
+                  <div class="building-item-content">
+                    <div class="building-item-content-more">Více informací</div>
+                    <div class="building-item-content-price">
+                      8 500 000 KČ
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
-            <div class="col-xs-12 col-md-6 col-xl-3 p-3 mx-auto">
-              <a href="./detail.html" class="building-item">
-                <div class="building-item-image">
-                  <img src="../images/blank.png" data-src="../images/dum.png" class="lazy" alt="Nemovitost">
-                  <div class="building-item-image-label">garáž v ceně</div>
-                </div>
-                <div class="building-item-content">
-                  <div class="building-item-content-more">Více informací</div>
-                  <div class="building-item-content-price">8 500 000 KČ</div>
-                </div>
-              </a>
+            <div class="row pt-30 pb-30 mx-auto">
+              <div class="col-xs-12 col-md-6 col-xl-3 p-3 mx-auto">
+                <a href="./detail.html" class="building-item">
+                  <div class="building-item-image">
+                    <img src="../images/blank.png" data-src="../images/dum.png" class="lazy" alt="Nemovitost">
+                  </div>
+                  <div class="building-item-content">
+                    <div class="building-item-content-more">Více informací</div>
+                    <div class="building-item-content-price">
+                      8 500 000 KČ
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-xs-12 col-md-6 col-xl-3 p-3 mx-auto">
+                <a href="./detail.html" class="building-item">
+                  <div class="building-item-image">
+                    <img src="../images/blank.png" data-src="../images/dum.png" class="lazy" alt="Nemovitost">
+                    <div class="building-item-image-label">
+                      top
+                    </div>
+                  </div>
+                  <div class="building-item-content">
+                    <div class="building-item-content-more">Více informací</div>
+                    <div class="building-item-content-price">
+                      8 500 000 KČ
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-xs-12 col-md-6 col-xl-3 p-3 mx-auto">
+                <a href="./detail.html" class="building-item">
+                  <div class="building-item-image">
+                    <img src="../images/blank.png" data-src="../images/dum.png" class="lazy" alt="Nemovitost">
+                    <div class="building-item-image-label">
+                      nízkoenergetický
+                    </div>
+                  </div>
+                  <div class="building-item-content">
+                    <div class="building-item-content-more">Více informací</div>
+                    <div class="building-item-content-price">
+                      8 500 000 KČ
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-xs-12 col-md-6 col-xl-3 p-3 mx-auto">
+                <a href="./detail.html" class="building-item">
+                  <div class="building-item-image">
+                    <img src="../images/blank.png" data-src="../images/dum.png" class="lazy" alt="Nemovitost">
+                    <div class="building-item-image-label">
+                      garáž v ceně
+                    </div>
+                  </div>
+                  <div class="building-item-content">
+                    <div class="building-item-content-more">Více informací</div>
+                    <div class="building-item-content-price">
+                      8 500 000 KČ
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="row pt-30 pb-30 mx-auto">
-            <div class="col-xs-12 col-md-6 col-xl-3 p-3 mx-auto">
-              <a href="./detail.html" class="building-item">
-                <div class="building-item-image">
-                  <img src="../images/blank.png" data-src="../images/dum.png" class="lazy" alt="Nemovitost">
-                </div>
-                <div class="building-item-content">
-                  <div class="building-item-content-more">Více informací</div>
-                  <div class="building-item-content-price">8 500 000 KČ</div>
-                </div>
-              </a>
+            <div class="text-center">
+              <a href="#" class="btn-rounded btn-orange btn-orange-bgr">Zobrazit další nemovitosti</a>
             </div>
-            <div class="col-xs-12 col-md-6 col-xl-3 p-3 mx-auto">
-              <a href="./detail.html" class="building-item">
-                <div class="building-item-image">
-                  <img src="../images/blank.png" data-src="../images/dum.png" class="lazy" alt="Nemovitost">
-                  <div class="building-item-image-label">top</div>
-                </div>
-                <div class="building-item-content">
-                  <div class="building-item-content-more">Více informací</div>
-                  <div class="building-item-content-price">8 500 000 KČ</div>
-                </div>
-              </a>
-            </div>
-            <div class="col-xs-12 col-md-6 col-xl-3 p-3 mx-auto">
-              <a href="./detail.html" class="building-item">
-                <div class="building-item-image">
-                  <img src="../images/blank.png" data-src="../images/dum.png" class="lazy" alt="Nemovitost">
-                  <div class="building-item-image-label">nízkoenergetický</div>
-                </div>
-                <div class="building-item-content">
-                  <div class="building-item-content-more">Více informací</div>
-                  <div class="building-item-content-price">8 500 000 KČ</div>
-                </div>
-              </a>
-            </div>
-            <div class="col-xs-12 col-md-6 col-xl-3 p-3 mx-auto">
-              <a href="./detail.html" class="building-item">
-                <div class="building-item-image">
-                  <img src="../images/blank.png" data-src="../images/dum.png" class="lazy" alt="Nemovitost">
-                  <div class="building-item-image-label">garáž v ceně</div>
-                </div>
-                <div class="building-item-content">
-                  <div class="building-item-content-more">Více informací</div>
-                  <div class="building-item-content-price">8 500 000 KČ</div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="pb-60">
-            <a href="#" class="btn-rounded btn-orange">Zobrazit další nemovitosti</a>
           </div>
         </div>
       </div>

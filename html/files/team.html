@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link rel="stylesheet" href="../scss/style.min.css">
-    <link rel="stylesheet" href="../scss/team.min.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.4/jquery.lazy.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -15,7 +14,7 @@
   </head>
   <body>
     <header>
-      <div class="pux-container text-center">
+      <div class="pux-container">
         <div class="header">
           <div class="header-logo">
             <a href="../index.html">
@@ -29,7 +28,7 @@
               <li><a href="./career.html">Kariéra</a></li>
               <li><a href="./buildings.html">Nemovitosti</a></li>
               <li><a href="#footer">Kontakt</a></li>
-              <li><a href="./tip.html">Odměna za tip</a></li>
+              <li class="mobile-menu"><a href="./tip.html">Odměna za tip</a></li>
             </ul>
           </div>
           <a href="./tip.html" class="header-button btn btn-primary">Odměna za tip</a>
@@ -42,231 +41,257 @@
       </div>
     </header>
     <main>
+      <div class="header-helper"></div>
       <div class="pux-container">
-        <div class="team-container text-center pt-60 pb-60">
-          <h3>Naši makléři</h3>
-          <hr>
-          <div class="pt-60 pb-60 text-container">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-lg-6">
-              <div class="person-item">
-                <div class="person-item-image mt-30 mb-30">
-                  <div class="person-item-image-inner">
-                    <img src="../images/jan_maly.png" class="portrait" alt="Jan Malý">
-                  </div>
-                </div>
-                <div class="naperson-item-content pb-30 text-left">
-                  <div class="naperson-item-content-name pb-pb-3 pt-3">Jan Malý</div>
-                  <div class="naperson-item-content-specialization pb-3 pt-3">
-                    <div class="naperson-item-content-specialization-title">specializace</div>
-                    <div class="naperson-item-content-specialization-content">
-                      prodej rodinných domů a bytů
+        <div class="team-container">
+          <div class="pt-60 pb-60">
+            <div class="text-container">
+              <h3>Naši makléři</h3>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-lg-6">
+                <div class="person-card">
+                  <div class="person-item-image">
+                    <div class="person-item-image-inner">
+                      <img src="../images/jan_maly.png" class="portrait" alt="Jan Malý">
                     </div>
                   </div>
-                  <div class="naperson-item-content-motto pb-3 pt-3">
-                    Jako realitní makléř jsem profesionál a proto prodám vaši nemovitost rychle a spolehlivě.
+                  <div class="naperson-item-content">
+                    <div class="naperson-item-content-name pb-pb-3 pt-3">
+                      Jan Malý
+                    </div>
+                    <div class="naperson-item-content-specialization pb-3 pt-3">
+                      <div class="naperson-item-content-specialization-title">
+                        specializace
+                      </div>
+                      <div class="naperson-item-content-specialization-content">
+                        prodej rodinných domů a bytů
+                      </div>
+                    </div>
+                    <div class="naperson-item-content-motto pb-3 pt-3">
+                      Jako realitní makléř jsem profesionál a proto prodám vaši nemovitost rychle a spolehlivě.
+                    </div>
+                    <div class="naperson-item-content-email pb-1 pt-3">
+                      <a href="mailto:info@spolehlivarealitka.cz">
+                        <span class="icon-ico-mail"></span>
+                        jan.maly@spolehlivarealitka.cz
+                      </a>
+                    </div>
+                    <div class="naperson-item-content-phone pb-3 pt-1">
+                      <span class="icon-ico-phone"></span>
+                      +420 123 456 789
+                    </div>
+                    <div class="naperson-item-content-id pb-3 pt-3">
+                      <span class="icon-ico-phone"></span>
+                      IČ: 12345678
+                    </div>
                   </div>
-                  <div class="naperson-item-content-email pb-1 pt-3">
-                    <a href="mailto:info@spolehlivarealitka.cz">
-                      <span class="icon-ico-mail"></span>
-                      jan.maly@spolehlivarealitka.cz
-                    </a>
+                </div>
+              </div>
+              <div class="col-xs-12 col-lg-6">
+                <div class="person-card">
+                  <div class="person-item-image">
+                    <div class="person-item-image-inner">
+                      <img src="../images/jan_maly.png" class="portrait" alt="Jan Malý">
+                    </div>
                   </div>
-                  <div class="naperson-item-content-phone pb-3 pt-1">
-                    <span class="icon-ico-phone"></span>
-                    +420 123 456 789
-                  </div>
-                  <div class="naperson-item-content-id pb-3 pt-3">
-                    <span class="icon-ico-phone"></span>
-                    IČ: 12345678
+                  <div class="naperson-item-content">
+                    <div class="naperson-item-content-name pb-pb-3 pt-3">
+                      Jan Malý
+                    </div>
+                    <div class="naperson-item-content-specialization pb-3 pt-3">
+                      <div class="naperson-item-content-specialization-title">
+                        specializace
+                      </div>
+                      <div class="naperson-item-content-specialization-content">
+                        prodej rodinných domů a bytů
+                      </div>
+                    </div>
+                    <div class="naperson-item-content-motto pb-3 pt-3">
+                      Jako realitní makléř jsem profesionál a proto prodám vaši nemovitost rychle a spolehlivě.
+                    </div>
+                    <div class="naperson-item-content-email pb-1 pt-3">
+                      <a href="mailto:info@spolehlivarealitka.cz">
+                        <span class="icon-ico-mail"></span>
+                        jan.maly@spolehlivarealitka.cz
+                      </a>
+                    </div>
+                    <div class="naperson-item-content-phone pb-3 pt-1">
+                      <span class="icon-ico-phone"></span>
+                      +420 123 456 789
+                    </div>
+                    <div class="naperson-item-content-id pb-3 pt-3">
+                      <span class="icon-ico-phone"></span>
+                      IČ: 12345678
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-lg-6">
-              <div class="person-item">
-                <div class="person-item-image mt-30 mb-30">
-                  <div class="person-item-image-inner">
-                    <img src="../images/jan_maly.png" class="portrait" alt="Jan Malý">
-                  </div>
-                </div>
-                <div class="naperson-item-content pb-30 text-left">
-                  <div class="naperson-item-content-name pb-pb-3 pt-3">Jan Malý</div>
-                  <div class="naperson-item-content-specialization pb-3 pt-3">
-                    <div class="naperson-item-content-specialization-title">specializace</div>
-                    <div class="naperson-item-content-specialization-content">
-                      prodej rodinných domů a bytů
+            <div class="row">
+              <div class="col-xs-12 col-lg-6">
+                <div class="person-card">
+                  <div class="person-item-image">
+                    <div class="person-item-image-inner">
+                      <img src="../images/jan_maly.png" class="portrait" alt="Jan Malý">
                     </div>
                   </div>
-                  <div class="naperson-item-content-motto pb-3 pt-3">
-                    Jako realitní makléř jsem profesionál a proto prodám vaši nemovitost rychle a spolehlivě.
+                  <div class="naperson-item-content">
+                    <div class="naperson-item-content-name pb-pb-3 pt-3">
+                      Jan Malý
+                    </div>
+                    <div class="naperson-item-content-specialization pb-3 pt-3">
+                      <div class="naperson-item-content-specialization-title">
+                        specializace
+                      </div>
+                      <div class="naperson-item-content-specialization-content">
+                        prodej rodinných domů a bytů
+                      </div>
+                    </div>
+                    <div class="naperson-item-content-motto pb-3 pt-3">
+                      Jako realitní makléř jsem profesionál a proto prodám vaši nemovitost rychle a spolehlivě.
+                    </div>
+                    <div class="naperson-item-content-email pb-1 pt-3">
+                      <a href="mailto:info@spolehlivarealitka.cz">
+                        <span class="icon-ico-mail"></span>
+                        jan.maly@spolehlivarealitka.cz
+                      </a>
+                    </div>
+                    <div class="naperson-item-content-phone pb-3 pt-1">
+                      <span class="icon-ico-phone"></span>
+                      +420 123 456 789
+                    </div>
+                    <div class="naperson-item-content-id pb-3 pt-3">
+                      <span class="icon-ico-phone"></span>
+                      IČ: 12345678
+                    </div>
                   </div>
-                  <div class="naperson-item-content-email pb-1 pt-3">
-                    <a href="mailto:info@spolehlivarealitka.cz">
-                      <span class="icon-ico-mail"></span>
-                      jan.maly@spolehlivarealitka.cz
-                    </a>
+                </div>
+              </div>
+              <div class="col-xs-12 col-lg-6">
+                <div class="person-card">
+                  <div class="person-item-image">
+                    <div class="person-item-image-inner">
+                      <img src="../images/jan_maly.png" class="portrait" alt="Jan Malý">
+                    </div>
                   </div>
-                  <div class="naperson-item-content-phone pb-3 pt-1">
-                    <span class="icon-ico-phone"></span>
-                    +420 123 456 789
-                  </div>
-                  <div class="naperson-item-content-id pb-3 pt-3">
-                    <span class="icon-ico-phone"></span>
-                    IČ: 12345678
+                  <div class="naperson-item-content">
+                    <div class="naperson-item-content-name pb-pb-3 pt-3">
+                      Jan Malý
+                    </div>
+                    <div class="naperson-item-content-specialization pb-3 pt-3">
+                      <div class="naperson-item-content-specialization-title">
+                        specializace
+                      </div>
+                      <div class="naperson-item-content-specialization-content">
+                        prodej rodinných domů a bytů
+                      </div>
+                    </div>
+                    <div class="naperson-item-content-motto pb-3 pt-3">
+                      Jako realitní makléř jsem profesionál a proto prodám vaši nemovitost rychle a spolehlivě.
+                    </div>
+                    <div class="naperson-item-content-email pb-1 pt-3">
+                      <a href="mailto:info@spolehlivarealitka.cz">
+                        <span class="icon-ico-mail"></span>
+                        jan.maly@spolehlivarealitka.cz
+                      </a>
+                    </div>
+                    <div class="naperson-item-content-phone pb-3 pt-1">
+                      <span class="icon-ico-phone"></span>
+                      +420 123 456 789
+                    </div>
+                    <div class="naperson-item-content-id pb-3 pt-3">
+                      <span class="icon-ico-phone"></span>
+                      IČ: 12345678
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-lg-6">
-              <div class="person-item">
-                <div class="person-item-image mt-30 mb-30">
-                  <div class="person-item-image-inner">
-                    <img src="../images/blank.png" data-src="../images/jan_maly.png" class="portrait lazy" alt="Jan Malý">
-                  </div>
-                </div>
-                <div class="naperson-item-content pb-30 text-left">
-                  <div class="naperson-item-content-name pb-pb-3 pt-3">Jan Malý</div>
-                  <div class="naperson-item-content-specialization pb-3 pt-3">
-                    <div class="naperson-item-content-specialization-title">specializace</div>
-                    <div class="naperson-item-content-specialization-content">
-                      prodej rodinných domů a bytů
+            <div class="row">
+              <div class="col-xs-12 col-lg-6">
+                <div class="person-card">
+                  <div class="person-item-image">
+                    <div class="person-item-image-inner">
+                      <img src="../images/jan_maly.png" class="portrait" alt="Jan Malý">
                     </div>
                   </div>
-                  <div class="naperson-item-content-motto pb-3 pt-3">
-                    Jako realitní makléř jsem profesionál a proto prodám vaši nemovitost rychle a spolehlivě.
+                  <div class="naperson-item-content">
+                    <div class="naperson-item-content-name pb-pb-3 pt-3">
+                      Jan Malý
+                    </div>
+                    <div class="naperson-item-content-specialization pb-3 pt-3">
+                      <div class="naperson-item-content-specialization-title">
+                        specializace
+                      </div>
+                      <div class="naperson-item-content-specialization-content">
+                        prodej rodinných domů a bytů
+                      </div>
+                    </div>
+                    <div class="naperson-item-content-motto pb-3 pt-3">
+                      Jako realitní makléř jsem profesionál a proto prodám vaši nemovitost rychle a spolehlivě.
+                    </div>
+                    <div class="naperson-item-content-email pb-1 pt-3">
+                      <a href="mailto:info@spolehlivarealitka.cz">
+                        <span class="icon-ico-mail"></span>
+                        jan.maly@spolehlivarealitka.cz
+                      </a>
+                    </div>
+                    <div class="naperson-item-content-phone pb-3 pt-1">
+                      <span class="icon-ico-phone"></span>
+                      +420 123 456 789
+                    </div>
+                    <div class="naperson-item-content-id pb-3 pt-3">
+                      <span class="icon-ico-phone"></span>
+                      IČ: 12345678
+                    </div>
                   </div>
-                  <div class="naperson-item-content-email pb-1 pt-3">
-                    <a href="mailto:info@spolehlivarealitka.cz">
-                      <span class="icon-ico-mail"></span>
-                      jan.maly@spolehlivarealitka.cz
-                    </a>
+                </div>
+              </div>
+              <div class="col-xs-12 col-lg-6">
+                <div class="person-card">
+                  <div class="person-item-image">
+                    <div class="person-item-image-inner">
+                      <img src="../images/jan_maly.png" class="portrait" alt="Jan Malý">
+                    </div>
                   </div>
-                  <div class="naperson-item-content-phone pb-3 pt-1">
-                    <span class="icon-ico-phone"></span>
-                    +420 123 456 789
-                  </div>
-                  <div class="naperson-item-content-id pb-3 pt-3">
-                    <span class="icon-ico-phone"></span>
-                    IČ: 12345678
+                  <div class="naperson-item-content">
+                    <div class="naperson-item-content-name pb-pb-3 pt-3">
+                      Jan Malý
+                    </div>
+                    <div class="naperson-item-content-specialization pb-3 pt-3">
+                      <div class="naperson-item-content-specialization-title">
+                        specializace
+                      </div>
+                      <div class="naperson-item-content-specialization-content">
+                        prodej rodinných domů a bytů
+                      </div>
+                    </div>
+                    <div class="naperson-item-content-motto pb-3 pt-3">
+                      Jako realitní makléř jsem profesionál a proto prodám vaši nemovitost rychle a spolehlivě.
+                    </div>
+                    <div class="naperson-item-content-email pb-1 pt-3">
+                      <a href="mailto:info@spolehlivarealitka.cz">
+                        <span class="icon-ico-mail"></span>
+                        jan.maly@spolehlivarealitka.cz
+                      </a>
+                    </div>
+                    <div class="naperson-item-content-phone pb-3 pt-1">
+                      <span class="icon-ico-phone"></span>
+                      +420 123 456 789
+                    </div>
+                    <div class="naperson-item-content-id pb-3 pt-3">
+                      <span class="icon-ico-phone"></span>
+                      IČ: 12345678
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-lg-6">
-              <div class="person-item">
-                <div class="person-item-image mt-30 mb-30">
-                  <div class="person-item-image-inner">
-                    <img src="../images/blank.png" data-src="../images/jan_maly.png" class="portrait lazy" alt="Jan Malý">
-                  </div>
-                </div>
-                <div class="naperson-item-content pb-30 text-left">
-                  <div class="naperson-item-content-name pb-pb-3 pt-3">Jan Malý</div>
-                  <div class="naperson-item-content-specialization pb-3 pt-3">
-                    <div class="naperson-item-content-specialization-title">specializace</div>
-                    <div class="naperson-item-content-specialization-content">
-                      prodej rodinných domů a bytů
-                    </div>
-                  </div>
-                  <div class="naperson-item-content-motto pb-3 pt-3">
-                    Jako realitní makléř jsem profesionál a proto prodám vaši nemovitost rychle a spolehlivě.
-                  </div>
-                  <div class="naperson-item-content-email pb-1 pt-3">
-                    <a href="mailto:info@spolehlivarealitka.cz">
-                      <span class="icon-ico-mail"></span>
-                      jan.maly@spolehlivarealitka.cz
-                    </a>
-                  </div>
-                  <div class="naperson-item-content-phone pb-3 pt-1">
-                    <span class="icon-ico-phone"></span>
-                    +420 123 456 789
-                  </div>
-                  <div class="naperson-item-content-id pb-3 pt-3">
-                    <span class="icon-ico-phone"></span>
-                    IČ: 12345678
-                  </div>
-                </div>
-              </div>
+            <div class="text-center">
+              <a href="./team.html" class="btn-rounded btn-orange btn-orange-bgr">Zobrazit další makléře</a>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-lg-6">
-              <div class="person-item">
-                <div class="person-item-image mt-30 mb-30">
-                  <div class="person-item-image-inner">
-                    <img src="../images/blank.png" data-src="../images/jan_maly.png" class="portrait lazy" alt="Jan Malý">
-                  </div>
-                </div>
-                <div class="naperson-item-content pb-30 text-left">
-                  <div class="naperson-item-content-name pb-pb-3 pt-3">Jan Malý</div>
-                  <div class="naperson-item-content-specialization pb-3 pt-3">
-                    <div class="naperson-item-content-specialization-title">specializace</div>
-                    <div class="naperson-item-content-specialization-content">
-                      prodej rodinných domů a bytů
-                    </div>
-                  </div>
-                  <div class="naperson-item-content-motto pb-3 pt-3">
-                    Jako realitní makléř jsem profesionál a proto prodám vaši nemovitost rychle a spolehlivě.
-                  </div>
-                  <div class="naperson-item-content-email pb-1 pt-3">
-                    <a href="mailto:info@spolehlivarealitka.cz">
-                      <span class="icon-ico-mail"></span>
-                      jan.maly@spolehlivarealitka.cz
-                    </a>
-                  </div>
-                  <div class="naperson-item-content-phone pb-3 pt-1">
-                    <span class="icon-ico-phone"></span>
-                    +420 123 456 789
-                  </div>
-                  <div class="naperson-item-content-id pb-3 pt-3">
-                    <span class="icon-ico-phone"></span>
-                    IČ: 12345678
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-lg-6">
-              <div class="person-item">
-                <div class="person-item-image mt-30 mb-30">
-                  <div class="person-item-image-inner">
-                    <img src="../images/blank.png" data-src="../images/jan_maly.png" class="portrait lazy" alt="Jan Malý">
-                  </div>
-                </div>
-                <div class="naperson-item-content pb-30 text-left">
-                  <div class="naperson-item-content-name pb-pb-3 pt-3">Jan Malý</div>
-                  <div class="naperson-item-content-specialization pb-3 pt-3">
-                    <div class="naperson-item-content-specialization-title">specializace</div>
-                    <div class="naperson-item-content-specialization-content">
-                      prodej rodinných domů a bytů
-                    </div>
-                  </div>
-                  <div class="naperson-item-content-motto pb-3 pt-3">
-                    Jako realitní makléř jsem profesionál a proto prodám vaši nemovitost rychle a spolehlivě.
-                  </div>
-                  <div class="naperson-item-content-email pb-1 pt-3">
-                    <a href="mailto:info@spolehlivarealitka.cz">
-                      <span class="icon-ico-mail"></span>
-                      jan.maly@spolehlivarealitka.cz
-                    </a>
-                  </div>
-                  <div class="naperson-item-content-phone pb-3 pt-1">
-                    <span class="icon-ico-phone"></span>
-                    +420 123 456 789
-                  </div>
-                  <div class="naperson-item-content-id pb-3 pt-3">
-                    <span class="icon-ico-phone"></span>
-                    IČ: 12345678
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="pb-60">
-            <a href="#" class="btn-rounded btn-orange">Zobrazit další makléře</a>
           </div>
         </div>
       </div>
@@ -274,17 +299,16 @@
         <div class="pux-container">
           <div class="career-container">
             <div class="row">
-              <div class="col-xs-12 col-md-4 py-0 my-0">
+              <div class="col-xs-12 col-md-5 py-0 my-0">
                 <img src="../images/blank.png" data-src="../images/gentleman.png" class="lazy animate-fade" alt="I want you!">
               </div>
-              <div class="col-xs-12 col-md-8 pt-60 pb-60">
+              <div class="col-xs-12 col-md-7 pt-60 pb-60">
                 <h3>Staňte se s námi gentlemanem ve světě realit</h3>
-                <hr>
                 <h4>Pomozte našim klientům s prodejem a nebo pronájmem nemovitostí.</h4>
                 <div class="pb-30 content">
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam commodo dui eget wisi. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Vivamus luctus egestas leo. Nulla pulvinar eleifend sem. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
                 </div>
-                <a href="./files/career.html" class="btn btn-default btn-orange pt-30 pb-30">Stát se gentlemanem</a>
+                <a href="./career.html" class="btn btn-default btn-orange pt-30 pb-30">Stát se gentlemanem</a>
               </div>
             </div>
           </div>

@@ -138,6 +138,19 @@ h3,
 .h3{
   @include pux-scale-with-min("font-size", 30px, 20px);
   @include pux-scale-with-min("line-height", 30px, 20px);
+  position: relative;
+  color: $main-color;
+  margin-bottom: 42px;
+  &:after{
+    content: "";
+    margin: auto;
+    width: 14rem;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    border-top: 2px solid $second-color;
+  }
 }
 
 h4,

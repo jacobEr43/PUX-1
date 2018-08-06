@@ -3,11 +3,7 @@
 @import "_mixins/pux/scale.scss";
 @import "_variables.scss";
 
-main{
-  margin-top:15rem;
-}
-
-.person-item{
+.person-card{
   margin-bottom: 3rem;
   padding-top: 5rem;
   padding-right: 3rem;
@@ -17,7 +13,7 @@ main{
     align-items: flex-start;
   }
   color: $second-color!important;
-  &-image{
+  .person-item-image{
     position: relative;
     text-align: center;
     @include media(md){
@@ -105,7 +101,8 @@ main{
   }
 }
 
-.btn-orange{
+.btn-orange-bgr{
+  margin-top: 5rem;
   background-color: $main-color;
   color: $base-white;
   &:hover,
@@ -119,14 +116,12 @@ main{
   max-width: 1300px;
   width: 100%;
   margin: auto;
-  h3{
-    color: $main-color;
-  }
-  .person-item{
-    //#e0eefd
+  .person-card{
+    margin: 2rem 0;
     box-shadow: 2px 2px 1px #eff8ff;
     background-color: #f7fbfe;
-    &-image{
+    .person-item-image{
+      margin: 3rem 0;
       position: relative;
       @include media(md){
         padding: 0 1rem 0 0;
@@ -139,9 +134,3 @@ main{
     }
   }
 }
-/*
-.career-container{
-  max-width: 1200px;
-  width: 100%;
-  margin: auto;
-}*/

@@ -4,13 +4,6 @@
 @import "_mixins/pux/scale.scss";
 @import "_variables.scss";
 
-%hr-line{
-  margin: 20px auto;
-  display: block;
-  height: 2px;
-  border: 0;
-}
-
 .pux-container{
     margin-left: auto;
     margin-right: auto;
@@ -77,6 +70,7 @@ header{
   width: 100%;
   top:0;
   z-index: 444;
+  text-align: center;
   .header{
     margin: auto;
     transition: 0.6s;
@@ -128,7 +122,7 @@ header{
             position: static;
             margin:0 1rem;
           }
-          &:last-child{
+          &.mobile-menu{
             @include media(md){
               display: none;
             }
@@ -351,8 +345,10 @@ footer{
 }
 
 .ico-item{
+  padding: 5rem 0;
   display: flex;
   align-items: flex-start;
+  text-align: left;
   @include media(lg){
     margin: 0 7rem;
   }
@@ -488,13 +484,12 @@ footer{
 }
 
 .jacket-container{
-  //padding-bottom: 64px;
+  text-align: center;
   img{
     z-index:-1;
   }
   div{
     margin-top: -40rem;
-    //margin-bottom:35rem;
     .btn-move{
       margin-top:30rem;
       a{
@@ -517,10 +512,6 @@ footer{
     h3{
       color: $second-color;
     }
-    hr:first-of-type{
-      @extend %hr-line;
-      border-top: 2px solid $second-color;
-    }
     span{
       font-size: 7.5rem;
       color: $second-color;
@@ -531,17 +522,18 @@ footer{
 .cooperation-container{
   h3{
     color: $main-color;
-  }
-  hr{
-    @extend %hr-line;
-    border-top: 2px solid $main-color;
+    &:after{
+      border-top: 2px solid $main-color;
+    }
   }
 }
 
 .team-container{
-  hr{
-    @extend %hr-line;
-    border-top: 2px solid $second-color;
+  .main-team{
+    h3{
+      color: $second-color;
+      margin-bottom: 10rem;
+    }
   }
   .row{
     div{
@@ -614,6 +606,7 @@ footer{
   }
 }
 .number-container{
+  text-align: center;
   max-width: 1000px;
   margin: auto;
 }
@@ -653,10 +646,12 @@ footer{
       width: 100%;
     }
   }
-  hr{
-    @extend %hr-line;
-    margin-left: 0;
-    border-top: 2px solid $second-color;
+  h3{
+    color: $second-color;
+    &:after{
+      margin-left: 0;
+      border-top: 2px solid $second-color;
+    }
   }
   h4{
     padding-top: 1rem;
@@ -669,7 +664,7 @@ footer{
 
 .offering-container{
   hr{
-    @extend %hr-line;
+    //@extend %hr-line;
     border-top: 2px solid $second-color;
   }
 }
@@ -678,6 +673,7 @@ footer{
   max-width: 1200px;
   width: 100%;
   margin: auto;
+  text-align: center;
 }
 
 .foot-container{

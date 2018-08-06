@@ -4,10 +4,12 @@
 
 .main-color-bgr{
   background-color: $main-color;
+  text-align: center;
 }
 
 .second-color-bgr{
   background-color: $second-color;
+  text-align: center;
 }
 
 .light-blue-bgr{
@@ -59,4 +61,8 @@ h4{
       color: $base-white;
     }
   }
+}
+
+.header-helper{
+  height: 50rem;
 }

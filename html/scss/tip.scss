@@ -4,35 +4,26 @@
 @import "_variables.scss";
 
 .tip-container{
-  position: relative;
-  h3{
-    color: $main-color;
+  .ico-item{
+    border-bottom: 2px solid #d7e8fa;
+    @include media(md){
+      width: 50%;
+      margin: auto;
+    }
+    @include media(lg){
+      width: 33%;
+      margin: auto;
+    }
+    &:last-child{
+      border:none;
+    }
   }
-  hr{
-    border-top: 2px solid $second-color;
-  }
-}
-
-.ico-item{
-  @include media(md){
-    width: 50%;
-    margin: auto;
-  }
-  @include media(lg){
-    width: 33%;
-    margin: auto;
-  }
-}
-
-.bottom-border{
-  border-bottom: 2px solid #d7e8fa;
 }
 
 .money{
   margin: auto;
   width: 100%;
   position: relative;
-  top: 3rem;
   @include media(md){
     width: 75%;
   }
@@ -41,7 +32,7 @@
     top: 0;
     left: 5%;
     @include transform(scale(0.4) rotate(105deg));
-    @include media(md){
+    @include media(lg){
       @include transform(scale(0.8) rotate(105deg));
     }
   }
@@ -51,7 +42,7 @@
     left: 20%;
     z-index: -1;
     @include transform(scale(0.5));
-    @include media(md){
+    @include media(lg){
       @include transform(scale(1));
     }
   }
@@ -59,11 +50,16 @@
     position: absolute;
     top: 12rem;
     left: 40%;
-    @include transform(scale(0.65) rotate(120deg));
+    @include transform(scale(0.45) rotate(120deg));
     @include media(md){
       @include transform(scale(1.3) rotate(120deg));
     }
-    //@include transform(scale(1.3) rotate(120deg));
+    @include media(lg){
+      @include transform(scale(1) rotate(120deg));
+    }
+    @include media(xxl){
+      @include transform(scale(1.3) rotate(120deg));
+    }
   }
   &-bill-4{
     position: absolute;
@@ -72,7 +68,7 @@
     @include transform(rotate(35deg));
     z-index: -1;
     @include transform(scale(0.5));
-    @include media(md){
+    @include media(lg){
       @include transform(scale(1));
     }
   }
@@ -81,13 +77,13 @@
     top: 5rem;
     left: 80%;
     @include transform(scale(0.4) rotate(75deg));
-    @include media(md){
+    @include media(lg){
       @include transform(scale(0.8) rotate(75deg));
     }
     @include transform(scale(0.8) rotate(75deg));
   }
 }
 
-.light-blue-bgr{
-  margin-top: 30rem;
+.light-blue-bgr.after-money{
+  margin-top: 23rem;
 }
