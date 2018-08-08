@@ -18,16 +18,18 @@
     text-align: center;
     @include media(md){
       padding: 1rem 1rem 0;
-      width: 40%;
+      //width: 40%;
     }
     @include media(lg){
       padding: 3rem 1rem 0;
-      width: 45%;
+      //width: 45%;
     }
     .portrait{
-      width: 50%!important;
+      width: 25rem!important;
+      height: 25rem!important;
       @include media(md){
-        width: 100%!important;
+        width: 23rem!important;
+        height: 23rem!important;
       }
       @include border-radius(1000px);
     }
@@ -125,12 +127,32 @@
       position: relative;
       @include media(md){
         padding: 0 1rem 0 0;
-        width: 30%!important;
+        //width: 30%!important;
       }
       @include media(lg){
         padding: 0 1rem 0 0;
-        width: 45%!important;
+        //width: 45%!important;
       }
     }
   }
+}
+
+.contact-container{
+  .person-card{
+    .person-item-image{
+      .person-item-image-inner{
+        .portrait{
+          @include media(md){
+            width: 12rem!important;
+            height: 12rem!important;
+          }
+          @include media(xl){
+            width: 20rem!important;
+            height: 20rem!important;
+          }
+        }
+      }
+    }
+  }
+
 }

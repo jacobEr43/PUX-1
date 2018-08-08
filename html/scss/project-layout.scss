@@ -553,15 +553,19 @@ footer{
           }
         }
         .tie:after{
-          content: url('../images/motylek_blue.png');
+          content:"\e918";
           display: block;
           position: relative;
-          top: -4.5rem;
+          margin-top: -7.5rem;
+          //margin-bottom: 0rem;
+          color: $second-color;
           @include opacity(0);
-          @include transform(scale(0.3));
+          font-size: 15rem;
           @include transition(500ms);
           @include media(md){
-            top: -3rem;
+            font-size: 10rem;
+            margin-top: -5rem!important;
+            margin-bottom: 2rem!important;
           }
         }
         .naperson-item-content{
@@ -598,7 +602,6 @@ footer{
           }
           .tie:after{
             @include opacity(1);
-            @include transform(scale(1));
           }
         }
       }

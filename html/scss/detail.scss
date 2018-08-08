@@ -87,7 +87,7 @@
             width: 30px;
             height: 12px;
             margin: 0 1rem;
-            background-color: green;
+            background-color: $base-white;
             position: relative;
             &:after{
               content: "";
@@ -95,11 +95,53 @@
               position: absolute;
               top:1.78px;
               right: -4.2px;
-              background-color: green;
+              background-color: $base-white;
               z-index: 100;
               width: 8.485px;
               height: 8.485px;
               @include rotate(45deg);
+            }
+            &.A{
+              background-color: #009136;
+              &:after{
+                background-color: #009136;
+              }
+            }
+            &.B{
+              background-color: #5ca82c;
+              &:after{
+                background-color: #5ca82c;
+              }
+            }
+            &.C{
+              background-color: #c9d100;
+              &:after{
+                background-color: #c9d100;
+              }
+            }
+            &.D{
+              background-color: #feed01;
+              &:after{
+                background-color: #feed01;
+              }
+            }
+            &.E{
+              background-color: #feb902;
+              &:after{
+                background-color: #feb902;
+              }
+            }
+            &.F{
+              background-color: #ea690b;
+              &:after{
+                background-color: #ea690b;
+              }
+            }
+            &.G{
+              background-color: #e3001b;
+              &:after{
+                background-color: #e3001b;
+              }
             }
           }
         }
