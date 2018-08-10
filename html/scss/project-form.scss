@@ -45,16 +45,18 @@ input[type="submit"]{
   width: 100%;
   background-color: $btn-default-background;
   color: $btn-default-color;
+  border: none;
   &:focus,
   &:hover{
+      border: none;
       text-decoration: none;
       background: lighten($btn-default-background, 5);
       color: $btn-default-color;
+  }
   cursor: pointer;
   padding: 4rem!important;
   @include media(md){
     padding: .8rem!important;
-  }
   }
 }
 
@@ -199,15 +201,6 @@ label{
 
 .uppercase{
   text-transform: uppercase;
-  margin-top: 2.5px;
-  font-size: 1.5rem;
-  @include media(md){
-    margin-top: 1.4rem;
-    font-size: 1.25rem;
-  }
-  @include media(lg){
-    margin-top: .8rem;
-  }
 }
 
 .checkbox{
